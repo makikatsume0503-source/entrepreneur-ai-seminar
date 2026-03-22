@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e1b4b;
+  --color-secondary: #d4af37;
+  --font-sans: "Noto Sans JP", sans-serif;
+}
+
+/* Fallback for body styles since @apply might be tricky in v4 mixed modes */
+body {
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-800);
+  font-family: var(--font-sans);
+}
