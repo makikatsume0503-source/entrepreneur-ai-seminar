@@ -9,10 +9,10 @@ export const DigitalTwin: React.FC = () => {
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-widest text-sm">NotebookLM</span>
                     <h2 className="text-2xl md:text-4xl font-bold mt-2 text-slate-800">
-                        NotebookLMで作る<br className="block md:hidden" /><span className="text-primary border-b-4 border-secondary/50">「社内AIアシスタント」</span>
+                        NotebookLMで作る<br className="block md:hidden" /><span className="text-primary border-b-4 border-secondary/50">「発信特化のAIアシスタント」</span>
                     </h2>
                     <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                        自社のノウハウや顧客データをAIに記憶させることで、<br />AIは単なるツールから「最強の右腕」へと進化します。
+                        あなた自身の思考や過去のメモ、リサーチをAIに記憶させることで、<br />SNSやブログなどの「発信力」が劇的に向上します。
                     </p>
                 </div>
 
@@ -25,18 +25,18 @@ export const DigitalTwin: React.FC = () => {
                     >
                         <FeatureItem
                             icon={<Brain className="w-6 h-6 text-secondary" />}
-                            title="自社のナレッジ・過去データをAIに記憶させる"
-                            description="社内マニュアル、過去のプレゼン資料、顧客対応データ。これらをNotebookLMに読み込ませることで、自社の「独自のノウハウ」や「ルール」をAIが学習します。"
+                            title="自分の思考・アイデアをAIにインプット"
+                            description="日々のメモ、過去の資料、気になるリサーチ結果。これらをNotebookLMに読み込ませることで、AIがあなたの「思考」や「知識」を学習します。"
                         />
                         <FeatureItem
                             icon={<Sparkles className="w-6 h-6 text-secondary" />}
-                            title="専属のAIアシスタントが業務を劇的に効率化"
-                            description="汎用的なAIの回答ではなく、自社の実情に基づいた回答や提案を生成。新サービスの壁打ち相手としても機能します。"
+                            title="圧倒的スピードで情報発信を加速"
+                            description="ゼロから文章を考える必要はありません。AIに記憶させたあなたの情報をもとに、SNS投稿や長文記事の原稿を高速で生成します。"
                         />
                         <FeatureItem
                             icon={<PenTool className="w-6 h-6 text-secondary" />}
-                            title="属人化の解消とスピーディな経営判断"
-                            description="AIが社内の知識を体系化してくれるため、担当者不在でも即座に必要な情報にアクセス可能になり、業務のスピードが格段に上がります。"
+                            title="一貫性のある「自分らしい」メッセージ"
+                            description="汎用的なAIの回答ではなく、あなたの元データのみを参照するため、一貫性があり、あなた自身の言葉のような自然な発信が可能になります。"
                         />
                     </motion.div>
 
@@ -53,7 +53,7 @@ export const DigitalTwin: React.FC = () => {
                         <div className="space-y-4">
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">1</div>
-                                <p className="text-sm text-slate-700">社内データ・マニュアルの選定と整理</p>
+                                <p className="text-sm text-slate-700">自分のメモ・原泉データの選定と整理</p>
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">2</div>
@@ -61,11 +61,11 @@ export const DigitalTwin: React.FC = () => {
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">3</div>
-                                <p className="text-sm text-slate-700">出力プロンプトと思考プロセスのチューニング</p>
+                                <p className="text-sm text-slate-700">発信用プロンプトのチューニング</p>
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-secondary/30 flex items-center gap-3 bg-secondary/5">
                                 <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold">4</div>
-                                <p className="text-sm font-bold text-primary">自社専用AIアシスタントの誕生</p>
+                                <p className="text-sm font-bold text-primary">あなた専用「発信」AIアシスタントの誕生</p>
                             </div>
                         </div>
                     </motion.div>

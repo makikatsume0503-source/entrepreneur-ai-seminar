@@ -24,8 +24,8 @@ export const Demonstrations: React.FC = () => {
                 <div className="grid md:grid-cols-3 gap-8">
                     <DemoCard
                         icon={<Presentation className="w-10 h-10 text-secondary" />}
-                        title="構成の整ったスライド資料作成"
-                        description="大量の社内資料やリサーチ結果をNotebookLMに読み込ませ、アイデアを入力するだけで、説得力のあるスライド資料が一瞬で完成します。"
+                        title="圧倒的スピードでの発信コンテンツ作成"
+                        description="あなた自身のメモやリサーチ結果をNotebookLMに読み込ませるだけで、SNS投稿からブログ、スライド資料まで、自然で説得力のあるコンテンツが一瞬で完成します。"
                         delay={0}
                     />
                     <DemoCard
