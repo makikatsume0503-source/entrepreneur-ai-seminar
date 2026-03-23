@@ -26,7 +26,7 @@ export const DigitalTwin: React.FC = () => {
                         <FeatureItem
                             icon={<Brain className="w-6 h-6 text-secondary" />}
                             title="自社のナレッジ・過去データをAIに記憶させる"
-                            description="事業計画書、社内マニュアル、過去の顧客対応データ。これらをNotebookLMに読み込ませることで、自社の「独自のノウハウ」や「ルール」をAIが学習します。"
+                            description="社内マニュアル、過去のプレゼン資料、顧客対応データ。これらをNotebookLMに読み込ませることで、自社の「独自のノウハウ」や「ルール」をAIが学習します。"
                         />
                         <FeatureItem
                             icon={<Sparkles className="w-6 h-6 text-secondary" />}

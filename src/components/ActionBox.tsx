@@ -17,7 +17,7 @@ export const ActionBox: React.FC = () => {
             <div className="flex flex-col gap-4">
                 {/* Real-time Participation */}
                 <motion.a
-                    href="https://buy.stripe.com/28EeVfdCm8k09DTauJbV609"
+                    href="https://buy.stripe.com/3cIcN7dCmeIocQ5gT7bV60e"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}

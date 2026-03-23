@@ -27,13 +27,12 @@ export const Hero: React.FC = () => {
                         起業家・経営者向け AI活用実践講座
                     </span>
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-6 drop-shadow-lg tracking-tight">
-                        「考える」を即座に形へ。<br /><br className="block md:hidden" />
                         <span className="text-secondary">AIを最強の右腕に。</span><br />
                     </h1>
                     <div className="text-sm sm:text-base md:text-xl font-medium mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-md text-slate-100 space-y-4 md:space-y-2">
                         <p>
                             自社のノウハウや課題をAIに読み込ませ、<br />
-                            事業計画・LP・自社専用アプリまで生み出す2時間。
+                            スライド資料・LP・自社専用アプリまで生み出す2時間。
                         </p>
                         <p>
                             AIは単なるツールから<br className="block md:hidden" />
@@ -45,7 +44,7 @@ export const Hero: React.FC = () => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
                         {/* Real-time Participation */}
                         <motion.a
-                            href="https://buy.stripe.com/28EeVfdCm8k09DTauJbV609"
+                            href="https://buy.stripe.com/3cIcN7dCmeIocQ5gT7bV60e"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
