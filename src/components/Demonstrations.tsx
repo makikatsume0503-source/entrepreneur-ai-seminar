@@ -57,7 +57,7 @@ const DemoCard = ({ icon, title, description, delay }: { icon: React.ReactNode, 
         <div className="mb-6 bg-slate-900 w-20 h-20 rounded-2xl flex items-center justify-center border border-slate-700 shadow-lg mx-auto">
             {icon}
         </div>
-        <h3 className="text-xl font-bold mb-4 text-center text-secondary">{title}</h3>
+        <h3 className="text-lg font-bold mb-4 text-center text-secondary">{title}</h3>
         <p className="text-slate-400 text-sm leading-relaxed text-center">
             {description}
         </p>
