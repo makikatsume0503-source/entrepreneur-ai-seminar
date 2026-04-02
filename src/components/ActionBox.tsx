@@ -7,10 +7,10 @@ export const ActionBox: React.FC = () => {
         <div className="bg-white p-8 rounded-2xl shadow-xl border border-secondary/20 text-center">
             <div className="mb-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-2">
-                    参加スタイルを選択して<br />申し込む
+                    参加スタイルを選択して<br />講座に申し込む
                 </h3>
                 <p className="text-slate-500 text-sm">
-                    お支払い完了後、すぐに詳細をお届けします。
+                    お支払い完了後、24時間以内に詳細をお届けします。
                 </p>
             </div>
 

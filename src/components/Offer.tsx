@@ -23,7 +23,7 @@ export const Offer: React.FC = () => {
                                 <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                                 <div>
                                     <h3 className="font-bold text-slate-900 mb-1">参加費</h3>
-                                    <p className="text-3xl font-bold text-primary">8,800円<span className="text-sm font-normal text-slate-500 ml-1">（税込）</span></p>
+                                    <p className="text-3xl font-bold text-primary">11,000円<span className="text-sm font-normal text-slate-500 ml-1">（税込）</span></p>
                                 </div>
                             </div>
                         </div>
