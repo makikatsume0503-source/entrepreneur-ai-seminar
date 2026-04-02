@@ -25,10 +25,10 @@ export const Conclusion: React.FC = () => {
                         その時、最後に選ばれ続けるのは誰か。
                     </p>
                     <p className="font-bold text-white text-lg md:text-xl py-4">
-                        それは、<span className="border-b-2 border-secondary">『自社の強み』という本質を持ち、</span><br className="hidden md:block" />
-                        NotebookLMで発信を仕組み化し、<br className="hidden md:block" />
-                        AIでLPを書き、専用アプリを作り、<br className="hidden md:block" />
-                        「考えること」だけに集中できる<br className="hidden md:block" />
+                        それは、<span className="border-b-2 border-secondary">『自社の強み』という本質を理解し、</span><br className="hidden md:block" />
+                        AIに任せることは任せながら、<br className="hidden md:block" />
+                        人間にしかできない「クリエイティブな思考」や「決断」だけに<br className="hidden md:block" />
+                        集中できる<br className="hidden md:block" />
                         『次世代の経営者・リーダー』です。
                     </p>
                     <p>
