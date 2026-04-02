@@ -39,7 +39,7 @@ export const Conclusion: React.FC = () => {
                 </div>
 
                 <div className="mt-12 text-secondary font-bold text-lg md:text-xl leading-relaxed">
-                    今日ここで学んだことが、<br className="block md:hidden" />
+                    この講座で学ぶことが、<br className="block md:hidden" />
                     あなたのビジネスを変える<br className="block md:hidden" />
                     最初の一歩になります。
                 </div>
