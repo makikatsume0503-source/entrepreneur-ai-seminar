@@ -53,7 +53,7 @@ export const DigitalTwin: React.FC = () => {
                         <div className="space-y-4">
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">1</div>
-                                <p className="text-sm text-slate-700">自分のメモ・原泉データの選定と整理</p>
+                                <p className="text-sm text-slate-700">過去の発信内容のデータやメモの選定と整理</p>
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">2</div>
