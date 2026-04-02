@@ -32,7 +32,7 @@ export const Conclusion: React.FC = () => {
                         『次世代の経営者・リーダー』です。
                     </p>
                     <p>
-                        外注費を削り、作業時間を圧縮し、<br className="hidden md:block" />
+                        作業時間を圧縮し、<br className="hidden md:block" />
                         事業の成長スピードを何倍にも高める——<br className="hidden md:block" />
                         この2時間で、その「武器の使い方」を実際に体験してください。
                     </p>
