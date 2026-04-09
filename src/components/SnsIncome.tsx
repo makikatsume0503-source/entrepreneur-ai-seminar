@@ -1,114 +1,107 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, FileText, TrendingUp, ArrowDown, ArrowRight, Sparkles } from 'lucide-react';
+import { Brain, Users, TrendingUp, ArrowRight, ArrowDown, CheckCircle } from 'lucide-react';
 
 export const SnsIncome: React.FC = () => {
     return (
-        <section className="py-24 bg-slate-50">
+        <section className="py-24 bg-white">
             <div className="container mx-auto px-4 max-w-5xl">
                 <div className="text-center mb-16">
-                    <span className="text-primary font-bold tracking-widest text-sm">SNS自動収益化</span>
+                    <span className="text-primary font-bold tracking-widest text-sm">受講後のキャリアパス</span>
                     <h2 className="text-2xl md:text-4xl font-bold mt-2 text-slate-800">
-                        この講座で学べる<br />
-                        <span className="text-primary border-b-4 border-secondary/50">「SNS自動収益化の仕組み」</span>
+                        AIに強くなれば、<br />
+                        <span className="text-primary border-b-4 border-secondary/50">教える側で稼げるようになる</span>
                     </h2>
                     <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                        本名不要。匿名アカウントでも、<br className="block md:hidden" />
-                        AIを使えば個人が再現できる<br />
-                        収益化の仕組みがあります。
+                        「AIが苦手」な人がまだ多い今こそ、<br />
+                        一歩先を学んだ人が<span className="font-bold text-slate-800">セミナー・コンサルで収益を得るチャンス</span>です。
                     </p>
                 </div>
 
-                {/* Niche callout */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-primary text-white rounded-2xl p-6 md:p-8 mb-12 max-w-3xl mx-auto text-center shadow-lg"
-                >
-                    <Sparkles className="w-7 h-7 text-secondary mx-auto mb-3" />
-                    <p className="text-base md:text-lg font-bold leading-relaxed">
-                        「AIが苦手な女性」×「女性講師から学べる」<br />
-                        <span className="text-secondary">このニッチは競合がほぼゼロ。</span>
-                    </p>
-                    <p className="text-slate-300 text-sm mt-2">
-                        同じ悩みを持つターゲットへの共感コンテンツが、SNSで圧倒的に刺さります。
-                    </p>
-                </motion.div>
-
-                {/* 3-step flow */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-14">
-                    <FlowStep
+                {/* 3-step path */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
+                    <PathStep
                         step="1"
-                        icon={<MessageSquare className="w-7 h-7 text-secondary" />}
-                        platform="Threads"
-                        title="匿名アカウントで毎日発信"
-                        description="AIが自動生成した投稿を毎日スケジュール配信。「AIが苦手な女性」の共感を集める。"
+                        icon={<Brain className="w-7 h-7 text-secondary" />}
+                        label="STEP 1"
+                        title="AIスキルを習得"
+                        description="このセミナーでAIの実践的な使い方をゼロから体験。苦手意識をなくし、自分のビジネスに使える武器を手に入れる。"
                         delay={0}
                     />
                     <ArrowRight className="hidden md:block w-8 h-8 text-secondary/50 flex-shrink-0" />
                     <ArrowDown className="block md:hidden w-8 h-8 text-secondary/50" />
-                    <FlowStep
+                    <PathStep
                         step="2"
-                        icon={<FileText className="w-7 h-7 text-secondary" />}
-                        platform="note"
-                        title="有料記事・マガジンで収益化"
-                        description="Threadsから誘導し、AIノウハウをnote有料記事として販売。継続的な収益を生む。"
+                        icon={<Users className="w-7 h-7 text-secondary" />}
+                        label="STEP 2"
+                        title="SNSで発信・信頼を積む"
+                        description="Threads × noteで「AIを学んだ私」を発信。同じ悩みを持つ女性・個人事業主からの共感と信頼を集める。"
                         delay={0.2}
                     />
                     <ArrowRight className="hidden md:block w-8 h-8 text-secondary/50 flex-shrink-0" />
                     <ArrowDown className="block md:hidden w-8 h-8 text-secondary/50" />
-                    <FlowStep
+                    <PathStep
                         step="3"
                         icon={<TrendingUp className="w-7 h-7 text-secondary" />}
-                        platform="セミナー / コンサル"
-                        title="高単価商品へ自然に誘導"
-                        description="信頼を積み重ね、セミナーや個別コンサルへつなげる。この仕組みで30万円を達成。"
+                        label="STEP 3"
+                        title="セミナー・コンサルで収益化"
+                        description="「AIを教えられる人」として、個人事業主・フリーランス向けにセミナー販売やコンサルを展開。"
                         delay={0.4}
                     />
                 </div>
 
-                {/* Threads post examples */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-2xl border border-slate-200 shadow-xl p-8 max-w-3xl mx-auto"
-                >
-                    <h3 className="text-center font-bold text-slate-800 mb-6 text-lg">
-                        AIが自動生成する投稿例
-                    </h3>
-                    <div className="space-y-4">
-                        <PostExample
-                            text="「AIって男性向けでしょ」と思ってた私が、女性目線でAIを使い始めたら売上が変わった話。難しいツールは一切使っていません。"
-                        />
-                        <PostExample
-                            text="AIが苦手な女性こそ、今が参入チャンス。競合が少ないニッチで、共感コンテンツを量産する方法をnoteに書きました。"
-                        />
-                        <PostExample
-                            text="3ヶ月前まで「AIって何から始めれば…」と思ってた私。今はAIを右腕にして、セミナー販売で30万円を達成しました。"
-                        />
-                    </div>
-                    <p className="text-center text-slate-400 text-xs mt-6">
-                        ※ 投稿文はAIが自動生成。あなたの実体験をもとにカスタマイズできます。
-                    </p>
-                </motion.div>
+                {/* Proof + points */}
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                    {/* Social proof */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-primary rounded-2xl p-8 text-white shadow-lg"
+                    >
+                        <p className="text-secondary font-bold text-sm tracking-wider mb-4">講師の実績</p>
+                        <p className="text-lg font-bold leading-relaxed mb-4">
+                            「AIが苦手な女性」向けに<br />
+                            セミナー販売とコンサルを実施。<br />
+                            <span className="text-secondary text-4xl font-black">30万円</span>を達成。
+                        </p>
+                        <p className="text-slate-300 text-sm leading-relaxed">
+                            特別なバックグラウンドは不要。<br />
+                            「一歩先を学んだ」だけで、教える側になれます。
+                        </p>
+                    </motion.div>
+
+                    {/* Why it works */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="space-y-4"
+                    >
+                        <p className="font-bold text-slate-800 text-lg mb-2">このモデルが機能する理由</p>
+                        <ReasonItem text="AIが苦手な人はまだ多く、需要が大きい" />
+                        <ReasonItem text="女性目線で教えられる講師は希少。競合が少ない" />
+                        <ReasonItem text="DX・AI知識はセミナー・コンサルの単価が高い" />
+                        <ReasonItem text="SNS発信で集客できれば、広告費ゼロで運用可能" />
+                        <ReasonItem text="自分の学習過程そのものがコンテンツになる" />
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
 };
 
-const FlowStep = ({
+const PathStep = ({
     step,
     icon,
-    platform,
+    label,
     title,
     description,
     delay,
 }: {
     step: string;
     icon: React.ReactNode;
-    platform: string;
+    label: string;
     title: string;
     description: string;
     delay: number;
@@ -118,27 +111,23 @@ const FlowStep = ({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay, duration: 0.5 }}
         viewport={{ once: true }}
-        className="bg-white border border-slate-200 rounded-2xl p-6 flex-1 max-w-xs w-full shadow-md text-center"
+        className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex-1 max-w-xs w-full text-center shadow-md"
     >
-        <div className="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center mx-auto mb-4">
+        <div className="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">
             {step}
         </div>
         <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mx-auto mb-4 border border-primary/10">
             {icon}
         </div>
-        <span className="text-xs font-bold text-secondary tracking-wider">{platform}</span>
-        <h3 className="font-bold text-slate-800 mt-1 mb-2 text-sm">{title}</h3>
+        <span className="text-xs font-bold text-secondary tracking-wider">{label}</span>
+        <h3 className="font-bold text-slate-800 mt-1 mb-2">{title}</h3>
         <p className="text-slate-500 text-xs leading-relaxed">{description}</p>
     </motion.div>
 );
 
-const PostExample = ({ text }: { text: string }) => (
-    <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-        <div className="flex items-start gap-3">
-            <div className="w-8 h-8 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary font-bold text-xs">
-                AI
-            </div>
-            <p className="text-slate-700 text-sm leading-relaxed">{text}</p>
-        </div>
+const ReasonItem = ({ text }: { text: string }) => (
+    <div className="flex items-start gap-3">
+        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+        <p className="text-slate-700 text-sm leading-relaxed">{text}</p>
     </div>
 );
