@@ -31,10 +31,13 @@ export const Profile: React.FC = () => {
                                 しかし<strong className="text-slate-800">2025年秋、状況が一変</strong>。AIの台頭により、ライター業の仕事が急速に失われはじめた。「このままでは終わる」という危機感から、1ヶ月・5万円を投じて猛勉強を決意。
                             </p>
                             <p>
-                                AI活用を徹底的に学んだ結果、デザイン・ホームページ制作・アプリ開発・NotebookLM活用など、<strong className="text-slate-800">これまでできなかった仕事領域が次々と開拓</strong>。その実践ノウハウをセミナーで教えはじめたことで、新たな収入源として<strong className="text-primary">月30万円を達成</strong>。
+                                AI活用を徹底的に学んだ結果、デザイン・ホームページ制作・アプリ開発・NotebookLM活用など仕事領域が拡大。その過程をSNSで発信していたところ、<strong className="text-slate-800">フォロワーから「教えてほしい」という声が自然に集まり始めた。</strong>
                             </p>
                             <p>
-                                現在は、同じ不安を抱える個人事業主・フリーランス女性に向け、AI・DXをやさしく教える講師として活動中。
+                                売り込みなし。広告費なし。発信が集客になり、個人事業主・フリーランス向けのセミナー販売とコンサルで<strong className="text-primary">月30万円を達成</strong>。
+                            </p>
+                            <p>
+                                現在は、同じ不安を抱える女性に向け、AI・DXをやさしく教える講師として活動中。
                             </p>
                         </div>
                     </div>

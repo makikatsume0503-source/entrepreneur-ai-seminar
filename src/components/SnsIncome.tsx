@@ -63,13 +63,15 @@ export const SnsIncome: React.FC = () => {
                         <p className="text-lg font-bold leading-relaxed mb-4">
                             「AIに仕事を奪われる」と震えていた<br />
                             元フリーランスライターが、<br />
-                            <span className="text-secondary font-black">1ヶ月・5万円の猛勉強</span>で講師に転身。<br />
+                            <span className="text-secondary font-black">1ヶ月・5万円の猛勉強</span>でAI活用を習得。<br />
+                            SNSで発信したら<span className="text-secondary font-black">「教えてほしい」</span>と<br />
+                            フォロワーから声が集まり、自然に集客。<br />
                             セミナー販売・コンサルで<br />
                             <span className="text-secondary text-4xl font-black">月30万円</span>を達成。
                         </p>
                         <p className="text-slate-300 text-sm leading-relaxed">
-                            特別なバックグラウンドは不要。<br />
-                            「一歩先を学んだ」だけで、教える側になれます。
+                            売り込みなし。広告費なし。<br />
+                            「発信が集客になる」仕組みを、この講座で体験してください。
                         </p>
                     </motion.div>
 
