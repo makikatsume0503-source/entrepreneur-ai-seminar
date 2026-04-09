@@ -61,9 +61,10 @@ export const SnsIncome: React.FC = () => {
                     >
                         <p className="text-secondary font-bold text-sm tracking-wider mb-4">講師の実績</p>
                         <p className="text-lg font-bold leading-relaxed mb-4">
-                            「AIが苦手な女性」向けに<br />
-                            セミナー販売とコンサルを実施。<br />
-                            <span className="text-secondary text-4xl font-black">30万円</span>を達成。
+                            「AIに仕事を奪われる」と震えていた<br />
+                            元フリーランスライターが、<br />
+                            猛勉強してセミナー販売・コンサルで<br />
+                            <span className="text-secondary text-4xl font-black">月30万円</span>を達成。
                         </p>
                         <p className="text-slate-300 text-sm leading-relaxed">
                             特別なバックグラウンドは不要。<br />
