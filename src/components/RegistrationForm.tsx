@@ -27,7 +27,7 @@ export const RegistrationForm: React.FC = () => {
             } else {
                 setStatus('error');
             }
-        } catch (error) {
+        } catch {
             setStatus('error');
         }
     };

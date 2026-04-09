@@ -16,9 +16,7 @@ export const Demonstrations: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         3つの衝撃デモンストレーション
                     </h2>
-                    <p className="text-slate-300 max-w-2xl mx-auto">
-                        「AIに任せる力」があれば、経営者は「考える」以外の実務を一瞬で形にできます。
-                    </p>
+
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
