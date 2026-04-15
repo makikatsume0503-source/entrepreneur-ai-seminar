@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 # .claude/skills/insta-carousel/scripts/generate-claude-code.sh
 #
-# Generates 8 Instagram carousel slides (1080×1350 px HTML)
+# Generates 8 Instagram carousel slides as PNG images (1080×1350)
 # Topic: "2026年注目度NO.1 Claude Code活用術"
 # Style: dark navy + gold luxury (◇ dividers, bg slide numbers, corner accents)
 #
 # Usage (run from repository root):
 #   bash .claude/skills/insta-carousel/scripts/generate-claude-code.sh [--output DIR]
+#
+# Output: <dir>/slide-01.png … slide-08.png
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 OUT="carousel-output-claude-code"
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -459,10 +462,16 @@ h2{font-size:60px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 EOF
 }
 
-# ── generate ──────────────────────────────────────────────────────────────────
+# ── generate HTML ─────────────────────────────────────────────────────────────
 for i in $(seq 1 8); do
   "s$i" | _save "$i"
 done
 
+# ── convert HTML → PNG ────────────────────────────────────────────────────────
 echo ""
-echo "Done. Open any .html file in a browser and screenshot at 1080×1350 px."
+echo "Rendering PNG images..."
+node "$SCRIPT_DIR/screenshot.cjs" "$OUT"
+
+echo ""
+echo "PNG slides saved to: $OUT/"
+ls "$OUT"/*.png
