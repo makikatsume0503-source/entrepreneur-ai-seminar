@@ -403,7 +403,7 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
   <p class="body"><span class="accent">2026年、AIの進化は加速しています。</span></p>
   <p class="body">「AIを使いこなす人」と<br>「そうでない人」の差は</p>
   <p class="bold-white">今この瞬間にも<br>開き続けています。</p>
-  <p class="note">この波に乗るなら、今が最もコスパの高い<br>タイミングです</p>
+  <p class="note">この波に乗るなら、今が絶好の<br>タイミングです</p>
   <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
