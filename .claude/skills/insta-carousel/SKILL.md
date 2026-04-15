@@ -1,46 +1,77 @@
 # insta-carousel
 
-Generate a branded 8-slide Instagram carousel (1080×1080 HTML) from the AI seminar landing page content.
+Instagram carousel slides（PNG画像）を生成してチャットに表示するスキル。
 
 ## When to use
 
-User invokes `/insta-carousel` or asks to generate an Instagram carousel for the seminar.
+ユーザーが `/insta-carousel` を実行、またはInstagramカルーセルの生成を依頼したとき。
 
 ## Steps
 
-1. Run the generation script from the repository root:
+### セミナー用カルーセル（デフォルト）
+
+1. リポジトリルートで生成スクリプトを実行:
    ```
-   bash .claude/skills/insta-carousel/scripts/generate.sh
+   bash .claude/skills/insta-carousel/scripts/generate.sh --output carousel-output
    ```
-   Supported options:
-   - `--output <dir>` — output directory (default: `carousel-output`)
-   - `--slides <n>` — number of slides to generate, 1–8 (default: 8)
+   その後、PNG変換:
+   ```
+   node .claude/skills/insta-carousel/scripts/screenshot.cjs carousel-output
+   ```
 
-2. Confirm the output files were created and list them.
+2. 生成された PNG を **全枚数 Read ツールで読み込み、チャットに表示する**。
+   ```
+   Read: carousel-output/slide-01.png
+   Read: carousel-output/slide-02.png
+   ... (全スライド)
+   ```
 
-3. Tell the user:
-   - Where the slide files are (`<dir>/slide-01.html` … `slide-08.html`)
-   - How to preview: open any HTML file in a browser at 1080×1350 viewport, then screenshot it for upload
-   - That each file is self-contained — no build step required
+3. 枚数・保存先を伝える。修正希望があれば対応する。
 
-## Slide contents
+---
 
-| # | Theme | Key copy (Japanese) |
-|---|-------|---------------------|
-| 01 | Cover | AIを最強の右腕に。 |
-| 02 | Problem | こんなお悩み、ありませんか？ |
-| 03 | Solution | NotebookLMで作る「発信特化のAIアシスタント」 |
-| 04 | Demo 1 | 圧倒的スピードでの発信コンテンツ作成 |
-| 05 | Demo 2 | 集客用LP・セールスレター作成 |
-| 06 | Demo 3 | 自社専用の業務効率化アプリ |
-| 07 | Urgency | 境界線がなくなる時代の「真の生存戦略」 |
-| 08 | CTA | 開催概要 — 3月12日 / ¥11,000 / Zoom |
+### Claude Code活用術カルーセル
 
-## Brand tokens (edit in `scripts/generate.sh`)
+1. リポジトリルートで実行（HTML生成 + PNG変換が自動で行われる）:
+   ```
+   bash .claude/skills/insta-carousel/scripts/generate-claude-code.sh --output carousel-output-claude-code
+   ```
+
+2. 生成された PNG を **全枚数 Read ツールで読み込み、チャットに表示する**。
+   ```
+   Read: carousel-output-claude-code/slide-01.png
+   Read: carousel-output-claude-code/slide-02.png
+   ... (全スライド)
+   ```
+
+3. 枚数・保存先を伝える。修正希望があれば対応する。
+
+---
+
+## 重要: 画像表示ルール
+
+- スクリプト実行後、**必ず全スライドの PNG を Read ツールで読み込んでチャット内に表示すること**
+- 「どこで見られますか？」と聞かれる前に自動表示する
+- 画像は `carousel-output*/slide-NN.png` に保存される
+
+## Slide contents（Claude Code活用術版）
+
+| # | Theme |
+|---|-------|
+| 01 | カバー — 2026年注目度NO.1 Claude Code活用術 |
+| 02 | Claude Codeとは？ |
+| 03 | たとえば、LPが自分で作れます |
+| 04 | 業務ツールだって作れます |
+| 05 | 「Skills」で繰り返し作業を自動化 |
+| 06 | 始め方はたったの3ステップ |
+| 07 | なぜ今、起業家が使うべきか |
+| 08 | CTA — 「できること」を一緒に広げませんか？ |
+
+## Brand tokens
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| Primary | `#1e1b4b` | Backgrounds, headings |
-| Secondary | `#d4af37` | Accents, CTAs, highlights |
-| Font | Noto Sans JP (Google Fonts) | All text |
-| Slide size | 1080 × 1350 px | Instagram portrait format |
+| Background | `#0b1629` + radial glow | 深いネイビー |
+| Gold | `#c9a84c` | タイトル・アクセント・◇デバイダー |
+| Font | Noto Sans JP (Google Fonts) | 全テキスト |
+| Slide size | 1080 × 1350 px | Instagram縦型 |

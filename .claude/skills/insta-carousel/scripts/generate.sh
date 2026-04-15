@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # .claude/skills/insta-carousel/scripts/generate.sh
 #
-# Generates 8 branded Instagram carousel slides (1080×1080 HTML)
+# Generates 8 branded Instagram carousel slides as PNG images (1080×1350)
 # from the AI seminar landing page content.
 #
 # Usage (run from repository root):
@@ -10,11 +10,10 @@
 # Options:
 #   --output <dir>    Output directory          (default: carousel-output)
 #   --slides <n>      Slides to generate, 1–8   (default: 8)
-#
-# Preview: open any output .html file in a browser.
-# Screenshot at 1080×1350 px for Instagram-ready images.
 
 set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # ── defaults ──────────────────────────────────────────────────────────────────
 OUT="carousel-output"
@@ -416,10 +415,16 @@ h2{font-size:50px;font-weight:900;color:#1e1b4b;text-align:center;margin-bottom:
 EOF
 }
 
-# ── generate requested slides ─────────────────────────────────────────────────
+# ── generate HTML slides ──────────────────────────────────────────────────────
 for i in $(seq 1 "$N"); do
   "s$i" | _save "$i"
 done
 
+# ── convert HTML → PNG ────────────────────────────────────────────────────────
 echo ""
-echo "Done. Open any .html file in a browser and screenshot at 1080×1350 px."
+echo "Rendering PNG images..."
+node "$SCRIPT_DIR/screenshot.cjs" "$OUT"
+
+echo ""
+echo "PNG slides saved to: $OUT/"
+ls "$OUT"/*.png
