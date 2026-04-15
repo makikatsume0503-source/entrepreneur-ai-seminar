@@ -474,4 +474,73 @@ node "$SCRIPT_DIR/screenshot.cjs" "$OUT"
 
 echo ""
 echo "PNG slides saved to: $OUT/"
-ls "$OUT"/*.png
+
+# ── generate gallery page ─────────────────────────────────────────────────────
+{
+cat << 'HEADER'
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Claude Code活用術 カルーセル</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0b1629;font-family:'Noto Sans JP',sans-serif;padding:48px 40px}
+h1{color:#c9a84c;text-align:center;font-size:32px;margin-bottom:8px;letter-spacing:2px}
+.sub{color:rgba(255,255,255,0.4);text-align:center;font-size:14px;margin-bottom:40px;letter-spacing:1px}
+.dl-all{text-align:center;margin-bottom:48px}
+.dl-all button{
+  background:linear-gradient(135deg,#c9a84c,#a07830);
+  color:#fff;border:none;padding:16px 56px;border-radius:10px;
+  font-size:20px;font-weight:bold;cursor:pointer;letter-spacing:2px;
+  box-shadow:0 6px 24px rgba(201,168,76,0.3);
+}
+.dl-all button:hover{opacity:.88}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1400px;margin:0 auto}
+.card{background:#162040;border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,0.15);transition:.2s}
+.card:hover{border-color:rgba(201,168,76,0.5);transform:translateY(-2px)}
+.card img{width:100%;display:block;cursor:pointer}
+.info{padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.name{color:#fff;font-size:14px;font-weight:500}
+.sub2{color:rgba(255,255,255,0.35);font-size:12px}
+.dl-btn{
+  background:#c9a84c;color:#0b1629;padding:7px 18px;border-radius:7px;
+  text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap;
+}
+.dl-btn:hover{opacity:.85}
+</style>
+</head>
+<body>
+<h1>Claude Code 活用術</h1>
+<p class="sub">全8枚 · 1080×1350px · Instagram縦型</p>
+<div class="dl-all">
+  <button onclick="downloadAll()">⬇ すべてダウンロード</button>
+</div>
+<div class="grid">
+HEADER
+
+for i in $(seq 1 8); do
+  f="$(printf 'slide-%02d.png' "$i")"
+  label="Slide $(printf '%02d' "$i")"
+  echo "  <div class=\"card\">"
+  echo "    <img src=\"$f\" alt=\"$label\" onclick=\"window.open('$f')\">"
+  echo "    <div class=\"info\"><div><div class=\"name\">$label</div><div class=\"sub2\">画像 · PNG</div></div>"
+  echo "    <a class=\"dl-btn\" href=\"$f\" download=\"$f\">ダウンロード</a></div>"
+  echo "  </div>"
+done
+
+cat << 'FOOTER'
+</div>
+<script>
+function downloadAll(){
+  document.querySelectorAll('.dl-btn').forEach((a,i)=>setTimeout(()=>a.click(),i*500));
+}
+</script>
+</body>
+</html>
+FOOTER
+} > "$OUT/index.html"
+
+echo "  ✓  $OUT/index.html (ギャラリーページ)"
+echo ""
+echo "ブラウザで開く → open $OUT/index.html"
