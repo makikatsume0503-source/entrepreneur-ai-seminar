@@ -20,7 +20,7 @@ User invokes `/insta-carousel` or asks to generate an Instagram carousel for the
 
 3. Tell the user:
    - Where the slide files are (`<dir>/slide-01.html` … `slide-08.html`)
-   - How to preview: open any HTML file in a browser at 1080×1080 viewport, then screenshot it for upload
+   - How to preview: open any HTML file in a browser at 1080×1350 viewport, then screenshot it for upload
    - That each file is self-contained — no build step required
 
 ## Slide contents
@@ -43,4 +43,4 @@ User invokes `/insta-carousel` or asks to generate an Instagram carousel for the
 | Primary | `#1e1b4b` | Backgrounds, headings |
 | Secondary | `#d4af37` | Accents, CTAs, highlights |
 | Font | Noto Sans JP (Google Fonts) | All text |
-| Slide size | 1080 × 1080 px | Instagram square format |
+| Slide size | 1080 × 1350 px | Instagram portrait format |

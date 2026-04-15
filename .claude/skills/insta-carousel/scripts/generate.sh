@@ -12,7 +12,7 @@
 #   --slides <n>      Slides to generate, 1–8   (default: 8)
 #
 # Preview: open any output .html file in a browser.
-# Screenshot at 1080×1080 px for Instagram-ready images.
+# Screenshot at 1080×1350 px for Instagram-ready images.
 
 set -euo pipefail
 
@@ -48,7 +48,7 @@ s1() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:linear-gradient(145deg,#1e1b4b 0%,#2d2870 50%,#1e1b4b 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -90,7 +90,7 @@ s2() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#f8f8fc;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -133,7 +133,7 @@ s3() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#fff;display:flex;flex-direction:column;align-items:center;
   justify-content:center;padding:72px 80px;position:relative;
@@ -184,7 +184,7 @@ s4() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#0f172a;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -228,7 +228,7 @@ s5() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#0f172a;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -272,7 +272,7 @@ s6() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#0f172a;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -316,7 +316,7 @@ s7() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:linear-gradient(145deg,#1e1b4b 0%,#2d2870 50%,#1e1b4b 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -367,7 +367,7 @@ s8() { cat << 'EOF'
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1080px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
   background:#fff;display:flex;flex-direction:column;align-items:center;
   justify-content:center;padding:80px;position:relative;
@@ -422,4 +422,4 @@ for i in $(seq 1 "$N"); do
 done
 
 echo ""
-echo "Done. Open any .html file in a browser and screenshot at 1080×1080 px."
+echo "Done. Open any .html file in a browser and screenshot at 1080×1350 px."
