@@ -269,7 +269,7 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
   <div class="cdiamond" style="bottom:120px;left:52px"></div>
   <h2>「Skills」で<br>繰り返し作業を自動化</h2>
   <div class="divider"><span>◇</span></div>
-  <p class="body">毎回同じ指示を出すのは<br>もったいないですよね。</p>
+  <p class="body">毎回同じ指示を出すのは<br>面倒ですよね。</p>
   <p class="body"><span class="accent">Skills機能を使えば、</span></p>
   <p class="body">自分だけの「指示書」を保存して<br>ワンコマンドで呼び出せます。</p>
   <p class="body">SNS投稿もLP制作も、<br>あなた仕様に自動化できます。</p>
