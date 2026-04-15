@@ -3,6 +3,7 @@
 #
 # Generates 8 Instagram carousel slides (1080×1350 px HTML)
 # Topic: "2026年注目度NO.1 Claude Code活用術"
+# Style: dark navy + gold luxury (◇ dividers, bg slide numbers, corner accents)
 #
 # Usage (run from repository root):
 #   bash .claude/skills/insta-carousel/scripts/generate-claude-code.sh [--output DIR]
@@ -37,38 +38,45 @@ s1() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:linear-gradient(145deg,#0f0e2e 0%,#1e1b4b 45%,#16144a 100%);
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  color:#fff;text-align:center;padding:80px;position:relative;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.no1{
-  display:inline-block;padding:12px 40px;border-radius:50px;
-  background:linear-gradient(135deg,#FFECC0,#d4af37,#B8860B);
-  color:#1e1b4b;font-weight:900;font-size:28px;letter-spacing:3px;margin-bottom:48px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.year{font-size:26px;font-weight:500;color:#a5b4fc;letter-spacing:4px;margin-bottom:20px}
-h1{font-size:88px;font-weight:900;line-height:1.15;margin-bottom:48px;letter-spacing:-1px}
-.gold{color:#d4af37}
-.line{width:80px;height:5px;background:#d4af37;margin:0 auto 44px;border-radius:3px}
-.sub{font-size:28px;font-weight:400;color:#c7d2fe;line-height:2;margin-bottom:52px}
+.no1-badge{
+  display:inline-block;padding:12px 44px;border-radius:4px;
+  background:linear-gradient(135deg,#c9a84c,#a07830);
+  color:#fff;font-weight:700;font-size:24px;letter-spacing:3px;margin-bottom:44px;
+}
+h1{font-size:88px;font-weight:900;line-height:1.2;color:#fff;margin-bottom:40px;letter-spacing:-1px}
+.gold{color:#c9a84c}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.sub{font-size:26px;color:rgba(255,255,255,0.75);line-height:2;margin-bottom:44px}
 .tag{
-  display:inline-block;border:2px solid rgba(165,180,252,0.4);
-  border-radius:50px;padding:10px 32px;font-size:20px;color:#a5b4fc;letter-spacing:2px;
+  display:inline-block;border:1px solid rgba(201,168,76,0.4);
+  border-radius:4px;padding:10px 36px;font-size:20px;color:rgba(201,168,76,0.85);
+  letter-spacing:2px;
 }
-.deco{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.06)}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.3);letter-spacing:1px}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
+}
 </style>
 </head>
 <body>
-  <div class="deco" style="width:800px;height:800px;top:-300px;right:-300px"></div>
-  <div class="deco" style="width:500px;height:500px;bottom:-200px;left:-150px"></div>
-  <p class="year">2026年</p>
-  <div class="no1">注目度 NO.1</div>
+  <div class="bg-num">01</div>
+  <div class="no1-badge">2026年 注目度 NO.1</div>
   <h1><span class="gold">Claude Code</span><br>活用術</h1>
-  <div class="line"></div>
+  <div class="divider"><span>◇</span></div>
   <p class="sub">プログラミング不要で<br>AIに仕事をさせる新時代</p>
   <div class="tag">起業家・経営者向け 実践ガイド</div>
-  <span class="num">1 / 8</span>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
@@ -85,62 +93,43 @@ s2() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#fff;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:80px;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.eyebrow{font-size:21px;color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:20px;text-align:center}
-h2{font-size:58px;font-weight:900;color:#1e1b4b;text-align:center;line-height:1.25;margin-bottom:16px}
-.gold{color:#d4af37}
-.desc{font-size:25px;color:#64748b;text-align:center;line-height:1.9;margin-bottom:52px;max-width:860px}
-.features{display:flex;flex-direction:column;gap:20px;width:100%}
-.feat{
-  background:#f8f8fc;border-radius:18px;padding:28px 36px;
-  display:flex;align-items:center;gap:24px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.feat-icon{
-  width:64px;height:64px;border-radius:16px;
-  background:linear-gradient(135deg,#1e1b4b,#2d2870);
-  display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;
+h2{font-size:58px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9;margin-top:8px}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
 }
-.feat-text h3{font-size:24px;font-weight:700;color:#1e1b4b;margin-bottom:6px}
-.feat-text p{font-size:20px;color:#64748b;line-height:1.6}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
 </style>
 </head>
 <body>
-  <p class="eyebrow">WHAT IS CLAUDE CODE</p>
-  <h2><span class="gold">Claude Code</span>って<br>何？</h2>
-  <p class="desc">Anthropic社が開発した、AIが直接コードを書き・実行し・改善する<br>革命的なAIコーディングアシスタント。</p>
-  <div class="features">
-    <div class="feat">
-      <div class="feat-icon">💬</div>
-      <div class="feat-text">
-        <h3>日本語で指示するだけ</h3>
-        <p>「〇〇を作って」と伝えれば、AIが自動でコードを生成・実行</p>
-      </div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">⚡</div>
-      <div class="feat-text">
-        <h3>プログラミング知識は不要</h3>
-        <p>技術的な知識がなくても、ビジネス課題をAIが解決</p>
-      </div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🔄</div>
-      <div class="feat-text">
-        <h3>試行錯誤もAIにお任せ</h3>
-        <p>エラーが出ても自分で直す。完成まで自律的に動き続ける</p>
-      </div>
-    </div>
-  </div>
-  <span class="num">2 / 8</span>
+  <div class="bg-num">02</div>
+  <h2>Claude Codeって<br>何？</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">Anthropic社が開発した<br>AIコーディングアシスタント。</p>
+  <p class="body"><span class="accent">日本語で指示するだけで</span></p>
+  <p class="body">コードを書き・実行し・改善まで<br>AIがすべて自律的に行います。</p>
+  <p class="note">プログラミングの知識は<br>一切必要ありません</p>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
 }
 
-# ── SLIDE 3: なぜ今、必要なのか ───────────────────────────────────────────────
+# ── SLIDE 3: LPが自分で作れます ───────────────────────────────────────────────
 s3() { cat << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
@@ -151,59 +140,44 @@ s3() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#f8f8fc;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:80px;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.eyebrow{font-size:21px;color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:20px;text-align:center}
-h2{font-size:52px;font-weight:900;color:#1e1b4b;text-align:center;line-height:1.35;margin-bottom:52px}
-.reasons{display:flex;flex-direction:column;gap:24px;width:100%}
-.reason{
-  background:#fff;border-radius:20px;padding:32px 40px;
-  box-shadow:0 4px 24px rgba(30,27,75,0.07);
-  display:flex;align-items:flex-start;gap:24px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.reason-num{
-  font-size:48px;font-weight:900;color:#d4af37;line-height:1;
-  flex-shrink:0;width:56px;
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.large{font-size:32px;color:rgba(255,255,255,0.95);font-weight:500;line-height:1.7;margin-bottom:28px}
+.note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
 }
-.reason h3{font-size:26px;font-weight:700;color:#1e1b4b;margin-bottom:8px}
-.reason p{font-size:21px;color:#64748b;line-height:1.7}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
 </style>
 </head>
 <body>
-  <p class="eyebrow">WHY NOW</p>
-  <h2>なぜ今、起業家が<br>学ぶべきなのか？</h2>
-  <div class="reasons">
-    <div class="reason">
-      <div class="reason-num">01</div>
-      <div>
-        <h3>エンジニア不要の時代が来た</h3>
-        <p>外注していた開発作業を、自分で・すぐに・ゼロコストで実現できるようになった</p>
-      </div>
-    </div>
-    <div class="reason">
-      <div class="reason-num">02</div>
-      <div>
-        <h3>競合との差が開き続ける</h3>
-        <p>導入した企業はすでに業務速度が数倍に。知らないままでは取り残される</p>
-      </div>
-    </div>
-    <div class="reason">
-      <div class="reason-num">03</div>
-      <div>
-        <h3>今が一番カンタンに始められる</h3>
-        <p>日本語対応・GUI不要・無料枠あり。参入障壁は過去最低水準</p>
-      </div>
-    </div>
-  </div>
-  <span class="num">3 / 8</span>
+  <div class="bg-num">03</div>
+  <h2>たとえば、<br>LPが自分で作れます</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">「こんなサービスの<br>ランディングページを作って」<br>と伝えるだけ。</p>
+  <p class="large"><span class="accent">デザイン・構成・コード</span>まで</p>
+  <p class="large">AIが一気に仕上げてくれます。</p>
+  <p class="note">外注費を抑えて、自分のペースで<br>何度でも修正できるのが魅力です</p>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
 }
 
-# ── SLIDE 4: 活用術① ノーコードアプリ ────────────────────────────────────────
+# ── SLIDE 4: 業務ツールだって作れます ────────────────────────────────────────
 s4() { cat << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
@@ -214,49 +188,42 @@ s4() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#0f172a;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:80px;color:#fff;text-align:center;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.badge{
-  display:inline-block;padding:10px 32px;border-radius:50px;
-  border:2px solid #d4af37;color:#d4af37;font-size:20px;font-weight:700;
-  letter-spacing:2px;margin-bottom:44px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.icon-wrap{
-  width:140px;height:140px;border-radius:28px;background:#1e293b;
-  border:2px solid #334155;display:flex;align-items:center;justify-content:center;
-  font-size:64px;margin:0 auto 44px;
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9;margin-top:8px}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
 }
-h2{font-size:58px;font-weight:900;color:#d4af37;line-height:1.3;margin-bottom:36px}
-.desc{font-size:26px;color:#94a3b8;line-height:1.9;max-width:820px;margin:0 auto 52px}
-.example{
-  background:#1e293b;border:1px solid #334155;border-radius:16px;
-  padding:28px 40px;width:100%;text-align:left;
-}
-.example-label{font-size:17px;color:#64748b;letter-spacing:2px;margin-bottom:12px}
-.example-text{font-size:23px;color:#e2e8f0;font-weight:500;line-height:1.7}
-.glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(100px);opacity:.12;pointer-events:none}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.25);letter-spacing:1px}
 </style>
 </head>
 <body>
-  <div class="glow" style="background:#d4af37;top:-150px;right:-150px"></div>
-  <div class="glow" style="background:#6366f1;bottom:-150px;left:-150px"></div>
-  <div class="badge">活用術 ① / 3</div>
-  <div class="icon-wrap">🛠️</div>
-  <h2>ノーコードで<br>専用ツールを即作成</h2>
-  <p class="desc">「〇〇が欲しい」と日本語で伝えるだけで、<br>あなたのビジネス専用アプリが完成します。</p>
-  <div class="example">
-    <p class="example-label">EXAMPLE</p>
-    <p class="example-text">「顧客ごとに提案書を自動生成するツールを作って」<br>→ 数分で動くアプリが完成</p>
-  </div>
-  <span class="num">4 / 8</span>
+  <div class="bg-num">04</div>
+  <h2>業務ツールだって<br>作れます</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body"><span class="accent">予約管理・顧客リストや<br>請求書の自動生成</span>など、</p>
+  <p class="body">いままで外注していたツールを<br>自分の手で作れるようになります。</p>
+  <p class="body">「こんなのあったらいいな」を<br>形にできる時代です。</p>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
 }
 
-# ── SLIDE 5: 活用術② 業務自動化 ──────────────────────────────────────────────
+# ── SLIDE 5: Skillsで繰り返し作業を自動化 ────────────────────────────────────
 s5() { cat << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
@@ -267,49 +234,49 @@ s5() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#0f172a;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:80px;color:#fff;text-align:center;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.badge{
-  display:inline-block;padding:10px 32px;border-radius:50px;
-  border:2px solid #d4af37;color:#d4af37;font-size:20px;font-weight:700;
-  letter-spacing:2px;margin-bottom:44px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.icon-wrap{
-  width:140px;height:140px;border-radius:28px;background:#1e293b;
-  border:2px solid #334155;display:flex;align-items:center;justify-content:center;
-  font-size:64px;margin:0 auto 44px;
+/* Corner diamond decorations */
+.cdiamond{
+  position:absolute;width:38px;height:38px;
+  border:1.5px solid rgba(201,168,76,0.35);transform:rotate(45deg);
 }
-h2{font-size:58px;font-weight:900;color:#d4af37;line-height:1.3;margin-bottom:36px}
-.desc{font-size:26px;color:#94a3b8;line-height:1.9;max-width:820px;margin:0 auto 52px}
-.example{
-  background:#1e293b;border:1px solid #334155;border-radius:16px;
-  padding:28px 40px;width:100%;text-align:left;
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
 }
-.example-label{font-size:17px;color:#64748b;letter-spacing:2px;margin-bottom:12px}
-.example-text{font-size:23px;color:#e2e8f0;font-weight:500;line-height:1.7}
-.glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(100px);opacity:.12;pointer-events:none}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.25);letter-spacing:1px}
 </style>
 </head>
 <body>
-  <div class="glow" style="background:#a78bfa;top:-150px;left:-100px"></div>
-  <div class="glow" style="background:#d4af37;bottom:-150px;right:-100px"></div>
-  <div class="badge">活用術 ② / 3</div>
-  <div class="icon-wrap">⚡</div>
-  <h2>繰り返し業務を<br>丸ごと自動化</h2>
-  <p class="desc">毎日の定型作業をスクリプト化して、<br>あなたは戦略だけに集中できる。</p>
-  <div class="example">
-    <p class="example-label">EXAMPLE</p>
-    <p class="example-text">「売上データをまとめて週次レポートをメールで送るスクリプトを作って」<br>→ 毎週3時間の作業がゼロに</p>
-  </div>
-  <span class="num">5 / 8</span>
+  <div class="bg-num">05</div>
+  <div class="cdiamond" style="top:52px;right:52px"></div>
+  <div class="cdiamond" style="bottom:120px;left:52px"></div>
+  <h2>「Skills」で<br>繰り返し作業を自動化</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">毎回同じ指示を出すのは<br>もったいないですよね。</p>
+  <p class="body"><span class="accent">Skills機能を使えば、</span></p>
+  <p class="body">自分だけの「指示書」を保存して<br>ワンコマンドで呼び出せます。</p>
+  <p class="body">SNS投稿もLP制作も、<br>あなた仕様に自動化できます。</p>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
 }
 
-# ── SLIDE 6: 活用術③ コンテンツ自動生成 ─────────────────────────────────────
+# ── SLIDE 6: 始め方はたったの3ステップ ───────────────────────────────────────
 s6() { cat << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
@@ -320,49 +287,79 @@ s6() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#0f172a;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:80px;color:#fff;text-align:center;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.badge{
-  display:inline-block;padding:10px 32px;border-radius:50px;
-  border:2px solid #d4af37;color:#d4af37;font-size:20px;font-weight:700;
-  letter-spacing:2px;margin-bottom:44px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.icon-wrap{
-  width:140px;height:140px;border-radius:28px;background:#1e293b;
-  border:2px solid #334155;display:flex;align-items:center;justify-content:center;
-  font-size:64px;margin:0 auto 44px;
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 44px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.steps{display:flex;flex-direction:column;gap:0;width:100%}
+.step-card{
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;padding:24px 32px;
+  display:flex;align-items:center;gap:24px;text-align:left;
 }
-h2{font-size:58px;font-weight:900;color:#d4af37;line-height:1.3;margin-bottom:36px}
-.desc{font-size:26px;color:#94a3b8;line-height:1.9;max-width:820px;margin:0 auto 52px}
-.example{
-  background:#1e293b;border:1px solid #334155;border-radius:16px;
-  padding:28px 40px;width:100%;text-align:left;
+.snum{
+  width:52px;height:52px;border-radius:50%;
+  background:#c9a84c;color:#0b1629;
+  font-weight:900;font-size:22px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.example-label{font-size:17px;color:#64748b;letter-spacing:2px;margin-bottom:12px}
-.example-text{font-size:23px;color:#e2e8f0;font-weight:500;line-height:1.7}
-.glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(100px);opacity:.12;pointer-events:none}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.25);letter-spacing:1px}
+.stitle{font-size:26px;color:#fff;font-weight:700;margin-bottom:6px}
+.ssub{font-size:19px;color:rgba(255,255,255,0.45)}
+.sarrow{
+  font-size:20px;color:rgba(201,168,76,0.45);
+  padding:10px 0;text-align:center;
+}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
+}
 </style>
 </head>
 <body>
-  <div class="glow" style="background:#10b981;top:-100px;right:-50px"></div>
-  <div class="glow" style="background:#6366f1;bottom:-150px;left:-100px"></div>
-  <div class="badge">活用術 ③ / 3</div>
-  <div class="icon-wrap">✍️</div>
-  <h2>LP・コンテンツを<br>一括で自動構築</h2>
-  <p class="desc">商品情報を渡すだけで、LP・SNS投稿・<br>スライドをまるごと生成。外注コストを大幅削減。</p>
-  <div class="example">
-    <p class="example-label">EXAMPLE</p>
-    <p class="example-text">「この商品情報でLP・Instagram投稿10本・提案資料を全部作って」<br>→ 外注費ゼロで即日完成</p>
+  <div class="bg-num">06</div>
+  <h2>始め方は<br>たったの3ステップ</h2>
+  <div class="divider"><span>◇</span></div>
+  <div class="steps">
+    <div class="step-card">
+      <div class="snum">1</div>
+      <div>
+        <div class="stitle">Proプランに登録する</div>
+        <div class="ssub">月額 約3,000円〜で利用できます</div>
+      </div>
+    </div>
+    <div class="sarrow">▼</div>
+    <div class="step-card">
+      <div class="snum">2</div>
+      <div>
+        <div class="stitle">アプリ感覚でインストール</div>
+        <div class="ssub">公式サイトの手順に沿うだけでOK</div>
+      </div>
+    </div>
+    <div class="sarrow">▼</div>
+    <div class="step-card">
+      <div class="snum">3</div>
+      <div>
+        <div class="stitle">日本語で「作って」と伝える</div>
+        <div class="ssub">あとはAIが形にしてくれます</div>
+      </div>
+    </div>
   </div>
-  <span class="num">6 / 8</span>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
 }
 
-# ── SLIDE 7: Before / After ───────────────────────────────────────────────────
+# ── SLIDE 7: なぜ今、起業家が使うべきか ──────────────────────────────────────
 s7() { cat << 'EOF'
 <!DOCTYPE html>
 <html lang="ja">
@@ -373,54 +370,38 @@ s7() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:#fff;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;padding:72px 80px;position:relative;
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.eyebrow{font-size:21px;color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:20px;text-align:center}
-h2{font-size:52px;font-weight:900;color:#1e1b4b;text-align:center;line-height:1.3;margin-bottom:52px}
-.cols{display:flex;gap:28px;width:100%}
-.col{flex:1;border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px}
-.col.before{background:#fff5f5;border:2px solid #fecaca}
-.col.after{background:#fffbeb;border:2px solid #d4af37}
-.col-title{
-  font-size:24px;font-weight:900;letter-spacing:2px;text-align:center;
-  padding-bottom:16px;border-bottom:2px solid;margin-bottom:4px;
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
-.before .col-title{color:#ef4444;border-color:#fecaca}
-.after .col-title{color:#d4af37;border-color:#d4af37}
-.item{display:flex;align-items:flex-start;gap:12px}
-.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:9px}
-.before .dot{background:#ef4444}
-.after .dot{background:#d4af37}
-.item p{font-size:21px;color:#1e1b4b;font-weight:500;line-height:1.6}
-.arrow{
-  font-size:52px;color:#d4af37;display:flex;align-items:center;
-  justify-content:center;flex-shrink:0;padding-top:40px;
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.bold-white{font-size:30px;font-weight:700;color:#fff;line-height:1.8;margin-bottom:24px}
+.note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9;margin-top:8px}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
 }
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
 </style>
 </head>
 <body>
-  <p class="eyebrow">BEFORE / AFTER</p>
-  <h2>Claude Code導入の<br>前後比較</h2>
-  <div class="cols">
-    <div class="col before">
-      <div class="col-title">BEFORE</div>
-      <div class="item"><div class="dot"></div><p>ツール開発に数週間＋外注費数十万円</p></div>
-      <div class="item"><div class="dot"></div><p>定型業務に毎日2〜3時間を消費</p></div>
-      <div class="item"><div class="dot"></div><p>コンテンツ作成を外部に依頼・待ち時間あり</p></div>
-      <div class="item"><div class="dot"></div><p>技術者がいないと何もできない</p></div>
-    </div>
-    <div class="arrow">→</div>
-    <div class="col after">
-      <div class="col-title">AFTER</div>
-      <div class="item"><div class="dot"></div><p>日本語で指示するだけで数分で完成</p></div>
-      <div class="item"><div class="dot"></div><p>自動化スクリプトが代わりに処理</p></div>
-      <div class="item"><div class="dot"></div><p>LP・投稿・資料を即日・ゼロ円で生成</p></div>
-      <div class="item"><div class="dot"></div><p>自分だけで完結。スピードが何倍にも</p></div>
-    </div>
-  </div>
-  <span class="num">7 / 8</span>
+  <div class="bg-num">07</div>
+  <h2>なぜ今、<br>起業家が使うべきか</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body"><span class="accent">2026年、AIの進化は加速しています。</span></p>
+  <p class="body">「AIを使いこなす人」と<br>「そうでない人」の差は</p>
+  <p class="bold-white">今この瞬間にも<br>開き続けています。</p>
+  <p class="note">この波に乗るなら、今が最もコスパの高い<br>タイミングです</p>
+  <div class="brand">勝 目 麻 希</div>
 </body>
 </html>
 EOF
@@ -437,54 +418,42 @@ s8() { cat << 'EOF'
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:linear-gradient(145deg,#0f0e2e 0%,#1e1b4b 45%,#16144a 100%);
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:80px;color:#fff;text-align:center;position:relative;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.eyebrow{font-size:21px;color:#a5b4fc;font-weight:500;letter-spacing:3px;margin-bottom:32px}
-h2{font-size:56px;font-weight:900;line-height:1.35;margin-bottom:48px}
-.gold{color:#d4af37}
-.details{
-  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
-  border-radius:24px;padding:44px 60px;width:100%;
-  display:flex;flex-direction:column;gap:24px;margin-bottom:48px;
-}
-.row{display:flex;align-items:center;gap:24px}
-.label{font-size:19px;color:#94a3b8;font-weight:500;width:120px;flex-shrink:0}
-.value{font-size:27px;color:#fff;font-weight:700}
-.price{font-size:48px;color:#d4af37;font-weight:900}
-.price-note{font-size:18px;color:#94a3b8;font-weight:400;margin-left:8px}
-.cta{
-  display:inline-block;padding:26px 80px;border-radius:16px;
-  background:linear-gradient(135deg,#FFECC0,#d4af37,#B8860B);
-  color:#1e1b4b;font-weight:900;font-size:30px;letter-spacing:1px;
-  box-shadow:0 8px 40px rgba(212,175,55,0.35);
-}
-.deco{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.05)}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.3);letter-spacing:1px}
+/* Corner brackets */
+.cb{position:absolute;width:60px;height:60px;border-color:rgba(201,168,76,0.4);border-style:solid}
+.cb.tl{top:44px;left:44px;border-width:2px 0 0 2px}
+.cb.tr{top:44px;right:44px;border-width:2px 2px 0 0}
+.cb.bl{bottom:44px;left:44px;border-width:0 0 2px 2px}
+.cb.br{bottom:44px;right:44px;border-width:0 2px 2px 0}
+h2{font-size:60px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.sub-white{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 36px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:16px}
+.note{font-size:20px;color:rgba(255,255,255,0.4);line-height:1.9;margin-bottom:48px}
+.brand-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
+.brand{font-size:20px;color:#c9a84c;letter-spacing:8px;font-weight:500}
+.brand-sub{font-size:16px;color:rgba(201,168,76,0.5);letter-spacing:2px}
 </style>
 </head>
 <body>
-  <div class="deco" style="width:600px;height:600px;top:-200px;right:-200px"></div>
-  <div class="deco" style="width:400px;height:400px;bottom:-160px;left:-120px"></div>
-  <p class="eyebrow">SEMINAR</p>
-  <h2><span class="gold">Claude Code</span>を<br>実際に体験しませんか？</h2>
-  <div class="details">
-    <div class="row">
-      <span class="label">📅 日時</span>
-      <span class="value">3月12日（木）9:00〜11:00</span>
-    </div>
-    <div class="row">
-      <span class="label">💻 形式</span>
-      <span class="value">オンライン Zoom</span>
-    </div>
-    <div class="row">
-      <span class="label">💰 参加費</span>
-      <span class="price">¥11,000<span class="price-note">（税込）</span></span>
-    </div>
+  <div class="cb tl"></div>
+  <div class="cb tr"></div>
+  <div class="cb bl"></div>
+  <div class="cb br"></div>
+  <h2>「できること」を<br>一緒に広げませんか？</h2>
+  <p class="sub-white">AI活用のご相談、<br>お気軽にどうぞ。</p>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">勝目 麻希のセミナーでは、<br>Claude Codeの実践活用を<br>一緒に体験できます。</p>
+  <p class="note">詳しくはプロフィールから<br>ご覧ください</p>
+  <div class="brand-wrap">
+    <div class="brand">勝 目 麻 希</div>
+    <div class="brand-sub">A I を、あなたの右腕に。</div>
   </div>
-  <div class="cta">リアルタイム参加はこちら →</div>
-  <span class="num">8 / 8</span>
 </body>
 </html>
 EOF

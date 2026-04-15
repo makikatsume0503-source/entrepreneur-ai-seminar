@@ -7,53 +7,41 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
 body{
-  background:linear-gradient(145deg,#0f0e2e 0%,#1e1b4b 45%,#16144a 100%);
+  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:80px;color:#fff;text-align:center;position:relative;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.eyebrow{font-size:21px;color:#a5b4fc;font-weight:500;letter-spacing:3px;margin-bottom:32px}
-h2{font-size:56px;font-weight:900;line-height:1.35;margin-bottom:48px}
-.gold{color:#d4af37}
-.details{
-  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
-  border-radius:24px;padding:44px 60px;width:100%;
-  display:flex;flex-direction:column;gap:24px;margin-bottom:48px;
-}
-.row{display:flex;align-items:center;gap:24px}
-.label{font-size:19px;color:#94a3b8;font-weight:500;width:120px;flex-shrink:0}
-.value{font-size:27px;color:#fff;font-weight:700}
-.price{font-size:48px;color:#d4af37;font-weight:900}
-.price-note{font-size:18px;color:#94a3b8;font-weight:400;margin-left:8px}
-.cta{
-  display:inline-block;padding:26px 80px;border-radius:16px;
-  background:linear-gradient(135deg,#FFECC0,#d4af37,#B8860B);
-  color:#1e1b4b;font-weight:900;font-size:30px;letter-spacing:1px;
-  box-shadow:0 8px 40px rgba(212,175,55,0.35);
-}
-.deco{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.05)}
-.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(255,255,255,0.3);letter-spacing:1px}
+/* Corner brackets */
+.cb{position:absolute;width:60px;height:60px;border-color:rgba(201,168,76,0.4);border-style:solid}
+.cb.tl{top:44px;left:44px;border-width:2px 0 0 2px}
+.cb.tr{top:44px;right:44px;border-width:2px 2px 0 0}
+.cb.bl{bottom:44px;left:44px;border-width:0 0 2px 2px}
+.cb.br{bottom:44px;right:44px;border-width:0 2px 2px 0}
+h2{font-size:60px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.sub-white{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 36px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
+.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:16px}
+.note{font-size:20px;color:rgba(255,255,255,0.4);line-height:1.9;margin-bottom:48px}
+.brand-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
+.brand{font-size:20px;color:#c9a84c;letter-spacing:8px;font-weight:500}
+.brand-sub{font-size:16px;color:rgba(201,168,76,0.5);letter-spacing:2px}
 </style>
 </head>
 <body>
-  <div class="deco" style="width:600px;height:600px;top:-200px;right:-200px"></div>
-  <div class="deco" style="width:400px;height:400px;bottom:-160px;left:-120px"></div>
-  <p class="eyebrow">SEMINAR</p>
-  <h2><span class="gold">Claude Code</span>を<br>実際に体験しませんか？</h2>
-  <div class="details">
-    <div class="row">
-      <span class="label">📅 日時</span>
-      <span class="value">3月12日（木）9:00〜11:00</span>
-    </div>
-    <div class="row">
-      <span class="label">💻 形式</span>
-      <span class="value">オンライン Zoom</span>
-    </div>
-    <div class="row">
-      <span class="label">💰 参加費</span>
-      <span class="price">¥11,000<span class="price-note">（税込）</span></span>
-    </div>
+  <div class="cb tl"></div>
+  <div class="cb tr"></div>
+  <div class="cb bl"></div>
+  <div class="cb br"></div>
+  <h2>「できること」を<br>一緒に広げませんか？</h2>
+  <p class="sub-white">AI活用のご相談、<br>お気軽にどうぞ。</p>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">勝目 麻希のセミナーでは、<br>Claude Codeの実践活用を<br>一緒に体験できます。</p>
+  <p class="note">詳しくはプロフィールから<br>ご覧ください</p>
+  <div class="brand-wrap">
+    <div class="brand">勝 目 麻 希</div>
+    <div class="brand-sub">A I を、あなたの右腕に。</div>
   </div>
-  <div class="cta">リアルタイム参加はこちら →</div>
-  <span class="num">8 / 8</span>
 </body>
 </html>
