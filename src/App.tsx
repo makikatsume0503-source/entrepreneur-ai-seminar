@@ -3,6 +3,7 @@ import { Home } from './components/Home';
 import { Legal } from './components/Legal';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { Footer } from './components/Footer';
+import { InstagramCarousel } from './components/InstagramCarousel';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/carousel" element={<InstagramCarousel />} />
           </Routes>
         </div>
         <Footer />
