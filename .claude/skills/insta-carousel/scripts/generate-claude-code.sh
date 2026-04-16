@@ -40,14 +40,25 @@ s1() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 .no1-badge{
@@ -58,8 +69,8 @@ body{
 h1{font-size:88px;font-weight:900;line-height:1.2;color:#fff;margin-bottom:40px;letter-spacing:-1px}
 .gold{color:#c9a84c}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .sub{font-size:26px;color:rgba(255,255,255,0.75);line-height:2;margin-bottom:44px}
 .tag{
   display:inline-block;border:1px solid rgba(201,168,76,0.4);
@@ -73,6 +84,8 @@ h1{font-size:88px;font-weight:900;line-height:1.2;color:#fff;margin-bottom:40px;
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">01</div>
   <div class="no1-badge">2026年 注目度 NO.1</div>
   <h1><span class="gold">Claude Code</span><br>活用術</h1>
@@ -95,20 +108,31 @@ s2() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 h2{font-size:58px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
 .accent{color:#c9a84c;font-weight:700}
 .note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9;margin-top:8px}
@@ -119,6 +143,8 @@ h2{font-size:58px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">02</div>
   <h2>Claude Codeって<br>何？</h2>
   <div class="divider"><span>◇</span></div>
@@ -142,20 +168,31 @@ s3() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
 .accent{color:#c9a84c;font-weight:700}
 .large{font-size:32px;color:rgba(255,255,255,0.95);font-weight:500;line-height:1.7;margin-bottom:28px}
@@ -167,6 +204,8 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">03</div>
   <h2>たとえば、<br>LPを自分で作れます</h2>
   <div class="divider"><span>◇</span></div>
@@ -190,20 +229,31 @@ s4() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
 .accent{color:#c9a84c;font-weight:700}
 .note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9;margin-top:8px}
@@ -214,6 +264,8 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">04</div>
   <h2>業務ツールだって<br>作れます</h2>
   <div class="divider"><span>◇</span></div>
@@ -236,25 +288,31 @@ s5() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
-}
-/* Corner diamond decorations */
-.cdiamond{
-  position:absolute;width:38px;height:38px;
-  border:1.5px solid rgba(201,168,76,0.35);transform:rotate(45deg);
 }
 h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
 .accent{color:#c9a84c;font-weight:700}
 .brand{
@@ -264,9 +322,9 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">05</div>
-  <div class="cdiamond" style="top:52px;right:52px"></div>
-  <div class="cdiamond" style="bottom:120px;left:52px"></div>
   <h2>「Skills」で<br>繰り返し作業を自動化</h2>
   <div class="divider"><span>◇</span></div>
   <p class="body">毎回同じ指示を出すのは<br>面倒ですよね。</p>
@@ -289,20 +347,31 @@ s6() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 44px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .steps{display:flex;flex-direction:column;gap:0;width:100%}
 .step-card{
   background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
@@ -328,6 +397,8 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">06</div>
   <h2>始め方は<br>たったの3ステップ</h2>
   <div class="divider"><span>◇</span></div>
@@ -372,20 +443,31 @@ s7() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
 .bg-num{
   position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  font-size:220px;font-weight:900;color:rgba(255,255,255,0.05);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
   line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
 }
 h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
 .accent{color:#c9a84c;font-weight:700}
 .bold-white{font-size:30px;font-weight:700;color:#fff;line-height:1.8;margin-bottom:24px}
@@ -397,6 +479,8 @@ h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
   <div class="bg-num">07</div>
   <h2>なぜ今、<br>起業家が使うべきか</h2>
   <div class="divider"><span>◇</span></div>
@@ -420,22 +504,32 @@ s8() { cat << 'EOF'
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background:radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-/* Corner brackets */
-.cb{position:absolute;width:60px;height:60px;border-color:rgba(201,168,76,0.4);border-style:solid}
-.cb.tl{top:44px;left:44px;border-width:2px 0 0 2px}
-.cb.tr{top:44px;right:44px;border-width:2px 2px 0 0}
-.cb.bl{bottom:44px;left:44px;border-width:0 0 2px 2px}
-.cb.br{bottom:44px;right:44px;border-width:0 2px 2px 0}
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
+}
 h2{font-size:60px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
 .sub-white{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:28px}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 36px;max-width:280px}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.4)}
-.divider span{color:rgba(201,168,76,0.7);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:16px}
 .note{font-size:20px;color:rgba(255,255,255,0.4);line-height:1.9;margin-bottom:48px}
 .brand-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -444,10 +538,9 @@ h2{font-size:60px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28
 </style>
 </head>
 <body>
-  <div class="cb tl"></div>
-  <div class="cb tr"></div>
-  <div class="cb bl"></div>
-  <div class="cb br"></div>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
+  <div class="bg-num">08</div>
   <h2>AIを活用して<br>「できること」を<br>一緒に広げませんか？</h2>
   <p class="sub-white">AI活用のご相談、<br>お気軽にどうぞ。</p>
   <div class="divider"><span>◇</span></div>
