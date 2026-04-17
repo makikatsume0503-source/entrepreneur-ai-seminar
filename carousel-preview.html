@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Instagram カルーセル プレビュー</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+  body { font-family: 'Noto Sans JP', sans-serif; }
+  .slide { display: none; }
+  .slide.active { display: flex; }
+  .aspect-square { aspect-ratio: 1 / 1; }
+</style>
+</head>
+<body class="bg-slate-100 min-h-screen py-10 px-4">
+
+<div class="max-w-sm mx-auto">
+  <h1 class="text-xl font-bold text-center mb-1 text-slate-800">Instagram カルーセル プレビュー</h1>
+  <p class="text-xs text-center text-slate-500 mb-6">各スライドをスクリーンショットして投稿してください</p>
+
+  <!-- Slide container -->
+  <div class="rounded-2xl overflow-hidden shadow-2xl">
+
+    <!-- Slide 1: Cover -->
+    <div class="slide active aspect-square w-full flex-col items-center justify-center overflow-hidden relative" style="background:#1e1b4b;">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style="background:#d4af37;transform:translate(30%,-30%);"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-10" style="background:#d4af37;transform:translate(-30%,30%);"></div>
+      <div class="absolute top-6 w-full text-center">
+        <span class="text-xs font-bold tracking-widest" style="color:#d4af37;">👆 保存して後で見てね</span>
+      </div>
+      <div class="relative z-10 flex flex-col items-center gap-4 px-8 text-center">
+        <span class="text-xs font-bold px-4 py-1 rounded-full border" style="color:#1e1b4b;background:#d4af37;border-color:#d4af37;">AI初心者向け</span>
+        <p class="text-white text-lg font-bold leading-snug">「AIって難しそう…」<br>そんな方へ✨</p>
+        <div>
+          <p class="text-4xl font-black leading-tight" style="color:#d4af37;">今すぐ使える</p>
+          <p class="text-5xl font-black" style="color:#d4af37;">AI 5選</p>
+        </div>
+        <p class="text-white text-sm leading-relaxed opacity-90">苦手意識があっても<br><span class="font-bold">日本語で話しかけるだけ</span>で使えます</p>
+      </div>
+      <div class="absolute bottom-4 right-5 text-xs opacity-40 text-white">1 / 7</div>
+    </div>
+
+    <!-- Slide 2: ChatGPT -->
+    <div class="slide aspect-square w-full flex-col overflow-hidden bg-white relative">
+      <div class="h-2 w-full" style="background:#1e1b4b;"></div>
+      <div class="flex-1 flex flex-col justify-between px-8 py-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black flex-shrink-0" style="background:#d4af37;color:#1e1b4b;">①</div>
+          <div>
+            <p class="text-xs font-bold tracking-widest" style="color:#d4af37;">万能AIアシスタント</p>
+            <h2 class="text-2xl font-black" style="color:#1e1b4b;">ChatGPT</h2>
+          </div>
+          <span class="ml-auto text-4xl">💬</span>
+        </div>
+        <div class="h-px w-full opacity-20" style="background:#1e1b4b;"></div>
+        <div class="rounded-2xl px-6 py-5 text-sm font-medium leading-loose text-center" style="background:#f8f7ff;color:#1e1b4b;">
+          メッセージを送るだけで<br>文章・アイデア・返信文まで<br>なんでも手伝ってくれる。<br>日本語で話しかけるだけでOK！
+        </div>
+        <div class="flex items-center gap-3 rounded-xl px-5 py-3" style="background:#1e1b4b;">
+          <span class="text-lg">👉</span>
+          <p class="text-sm font-bold" style="color:#d4af37;">まずここから始めよう</p>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-5 text-xs font-bold opacity-40" style="color:#1e1b4b;">2 / 7</div>
+    </div>
+
+    <!-- Slide 3: NotebookLM -->
+    <div class="slide aspect-square w-full flex-col overflow-hidden bg-white relative">
+      <div class="h-2 w-full" style="background:#1e1b4b;"></div>
+      <div class="flex-1 flex flex-col justify-between px-8 py-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black flex-shrink-0" style="background:#d4af37;color:#1e1b4b;">②</div>
+          <div>
+            <p class="text-xs font-bold tracking-widest" style="color:#d4af37;">自分専用のAI秘書</p>
+            <h2 class="text-2xl font-black" style="color:#1e1b4b;">NotebookLM</h2>
+          </div>
+          <span class="ml-auto text-4xl">🗂️</span>
+        </div>
+        <div class="h-px w-full opacity-20" style="background:#1e1b4b;"></div>
+        <div class="rounded-2xl px-6 py-5 text-sm font-medium leading-loose text-center" style="background:#f8f7ff;color:#1e1b4b;">
+          自分のメモやPDFを読み込ませると<br>AIが内容を理解して質問に答えてくれる。<br>Google製で安心◎<br>発信コンテンツ作成に最強！
+        </div>
+        <div class="flex items-center gap-3 rounded-xl px-5 py-3" style="background:#1e1b4b;">
+          <span class="text-lg">👉</span>
+          <p class="text-sm font-bold" style="color:#d4af37;">自分の資料を「記憶」させよう</p>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-5 text-xs font-bold opacity-40" style="color:#1e1b4b;">3 / 7</div>
+    </div>
+
+    <!-- Slide 4: Gemini -->
+    <div class="slide aspect-square w-full flex-col overflow-hidden bg-white relative">
+      <div class="h-2 w-full" style="background:#1e1b4b;"></div>
+      <div class="flex-1 flex flex-col justify-between px-8 py-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black flex-shrink-0" style="background:#d4af37;color:#1e1b4b;">③</div>
+          <div>
+            <p class="text-xs font-bold tracking-widest" style="color:#d4af37;">Googleが作ったマルチモーダルAI</p>
+            <h2 class="text-2xl font-black" style="color:#1e1b4b;">Gemini</h2>
+          </div>
+          <span class="ml-auto text-4xl">✨</span>
+        </div>
+        <div class="h-px w-full opacity-20" style="background:#1e1b4b;"></div>
+        <div class="rounded-2xl px-6 py-5 text-sm font-medium leading-loose text-center" style="background:#f8f7ff;color:#1e1b4b;">
+          テキストはもちろん画像・音声にも対応。<br>Google検索と連携しているので<br>最新情報にも強い！<br>GoogleユーザーならすぐにOK◎
+        </div>
+        <div class="flex items-center gap-3 rounded-xl px-5 py-3" style="background:#1e1b4b;">
+          <span class="text-lg">👉</span>
+          <p class="text-sm font-bold" style="color:#d4af37;">画像を見せながら相談しよう</p>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-5 text-xs font-bold opacity-40" style="color:#1e1b4b;">4 / 7</div>
+    </div>
+
+    <!-- Slide 5: Perplexity -->
+    <div class="slide aspect-square w-full flex-col overflow-hidden bg-white relative">
+      <div class="h-2 w-full" style="background:#1e1b4b;"></div>
+      <div class="flex-1 flex flex-col justify-between px-8 py-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black flex-shrink-0" style="background:#d4af37;color:#1e1b4b;">④</div>
+          <div>
+            <p class="text-xs font-bold tracking-widest" style="color:#d4af37;">AI版Google検索</p>
+            <h2 class="text-2xl font-black" style="color:#1e1b4b;">Perplexity</h2>
+          </div>
+          <span class="ml-auto text-4xl">🔍</span>
+        </div>
+        <div class="h-px w-full opacity-20" style="background:#1e1b4b;"></div>
+        <div class="rounded-2xl px-6 py-5 text-sm font-medium leading-loose text-center" style="background:#f8f7ff;color:#1e1b4b;">
+          調べたいことを話しかけると<br>根拠つきでわかりやすくまとめてくれる。<br>リサーチ時間が激減！<br>情報収集が一気にラクになる
+        </div>
+        <div class="flex items-center gap-3 rounded-xl px-5 py-3" style="background:#1e1b4b;">
+          <span class="text-lg">👉</span>
+          <p class="text-sm font-bold" style="color:#d4af37;">情報収集はここで一気に</p>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-5 text-xs font-bold opacity-40" style="color:#1e1b4b;">5 / 7</div>
+    </div>
+
+    <!-- Slide 6: Claude -->
+    <div class="slide aspect-square w-full flex-col overflow-hidden bg-white relative">
+      <div class="h-2 w-full" style="background:#1e1b4b;"></div>
+      <div class="flex-1 flex flex-col justify-between px-8 py-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black flex-shrink-0" style="background:#d4af37;color:#1e1b4b;">⑤</div>
+          <div>
+            <p class="text-xs font-bold tracking-widest" style="color:#d4af37;">文章力が最強のAI</p>
+            <h2 class="text-2xl font-black" style="color:#1e1b4b;">Claude</h2>
+          </div>
+          <span class="ml-auto text-4xl">✍️</span>
+        </div>
+        <div class="h-px w-full opacity-20" style="background:#1e1b4b;"></div>
+        <div class="rounded-2xl px-6 py-5 text-sm font-medium leading-loose text-center" style="background:#f8f7ff;color:#1e1b4b;">
+          長文要約・メール・ブログ執筆など<br>「書く仕事」がとにかく得意。<br>丁寧で自然な日本語が特徴！<br>ビジネス文書にぴったり◎
+        </div>
+        <div class="flex items-center gap-3 rounded-xl px-5 py-3" style="background:#1e1b4b;">
+          <span class="text-lg">👉</span>
+          <p class="text-sm font-bold" style="color:#d4af37;">文章を書くならこれ</p>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-5 text-xs font-bold opacity-40" style="color:#1e1b4b;">6 / 7</div>
+    </div>
+
+    <!-- Slide 7: CTA -->
+    <div class="slide aspect-square w-full flex-col items-center justify-center overflow-hidden relative" style="background:#1e1b4b;">
+      <div class="absolute top-0 left-0 w-72 h-72 rounded-full opacity-10" style="background:#d4af37;transform:translate(-30%,-30%);"></div>
+      <div class="absolute bottom-0 right-0 w-56 h-56 rounded-full opacity-10" style="background:#d4af37;transform:translate(30%,30%);"></div>
+      <div class="relative z-10 flex flex-col items-center gap-6 px-8 text-center">
+        <p class="text-4xl">🙌</p>
+        <p class="text-white text-lg font-bold leading-relaxed">まずは<span style="color:#d4af37;">1つ</span>、<br>今日試してみてください！</p>
+        <div class="w-full rounded-2xl px-6 py-5 space-y-3" style="background:rgba(255,255,255,0.08);border:1px solid rgba(212,175,55,0.25);">
+          <p class="text-white text-sm font-bold">💬 コメントで教えてね！</p>
+          <p class="text-white text-xs opacity-80 leading-relaxed">「使ってみたよ！」「これが気になる！」</p>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-bold" style="color:#d4af37;">AI活用のコツを定期的に発信中📲</p>
+          <p class="text-white text-sm font-bold">参考になったら<br><span style="color:#d4af37;">保存 ＆ フォロー</span> してね✨</p>
+        </div>
+      </div>
+      <div class="absolute bottom-4 right-5 text-xs opacity-40 text-white">7 / 7</div>
+    </div>
+
+  </div><!-- /slide container -->
+
+  <!-- Navigation dots -->
+  <div class="flex justify-center gap-2 mt-4" id="dots"></div>
+
+  <!-- Navigation buttons -->
+  <div class="flex items-center justify-between mt-4">
+    <button id="prev" onclick="changeSlide(-1)" class="px-5 py-2 rounded-xl text-sm font-bold text-white disabled:opacity-30" style="background:#1e1b4b;">← 前へ</button>
+    <span id="counter" class="text-sm font-bold text-slate-500">1 / 7</span>
+    <button id="next" onclick="changeSlide(1)" class="px-5 py-2 rounded-xl text-sm font-bold text-white" style="background:#1e1b4b;">次へ →</button>
+  </div>
+
+  <!-- Tab buttons -->
+  <div class="flex flex-wrap gap-2 justify-center mt-6">
+    <button onclick="goTo(0)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#1e1b4b;color:#fff;border-color:#1e1b4b;">表紙</button>
+    <button onclick="goTo(1)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">ChatGPT</button>
+    <button onclick="goTo(2)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">NotebookLM</button>
+    <button onclick="goTo(3)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">Gemini</button>
+    <button onclick="goTo(4)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">Perplexity</button>
+    <button onclick="goTo(5)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">Claude</button>
+    <button onclick="goTo(6)" class="tab-btn px-3 py-1 rounded-full text-xs font-bold border" style="background:#fff;color:#1e1b4b;border-color:#cbd5e1;">CTA</button>
+  </div>
+</div>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const tabs = document.querySelectorAll('.tab-btn');
+  const total = slides.length;
+
+  const dotsEl = document.getElementById('dots');
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('button');
+    d.className = 'w-2.5 h-2.5 rounded-full transition-all';
+    d.style.background = i === 0 ? '#1e1b4b' : '#cbd5e1';
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    tabs[current].style.background = '#fff';
+    tabs[current].style.color = '#1e1b4b';
+    tabs[current].style.borderColor = '#cbd5e1';
+    dotsEl.children[current].style.background = '#cbd5e1';
+    dotsEl.children[current].style.transform = 'scale(1)';
+
+    current = n;
+
+    slides[current].classList.add('active');
+    tabs[current].style.background = '#1e1b4b';
+    tabs[current].style.color = '#fff';
+    tabs[current].style.borderColor = '#1e1b4b';
+    dotsEl.children[current].style.background = '#1e1b4b';
+    dotsEl.children[current].style.transform = 'scale(1.3)';
+
+    document.getElementById('counter').textContent = (current + 1) + ' / ' + total;
+    document.getElementById('prev').disabled = current === 0;
+    document.getElementById('next').disabled = current === total - 1;
+  }
+
+  function changeSlide(dir) {
+    const next = current + dir;
+    if (next >= 0 && next < total) goTo(next);
+  }
+</script>
+</body>
+</html>
