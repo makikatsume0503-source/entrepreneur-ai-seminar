@@ -1,35 +1,63 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Palette, Image, Layers, Monitor } from 'lucide-react';
+import { Image, Palette, PenLine, Share2, Search, Layout, Smartphone, Presentation } from 'lucide-react';
 
 const skills = [
     {
+        icon: <Search className="w-8 h-8 text-secondary" />,
+        label: 'Research AI',
+        title: 'トレンドリサーチを自動化',
+        description:
+            'PerplexityやChatGPTで市場・競合・読者の悩みをリアルタイム調査。ネタ切れゼロで常に旬のテーマで発信できます。',
+    },
+    {
+        icon: <PenLine className="w-8 h-8 text-secondary" />,
+        label: 'Writing AI',
+        title: '共感を呼ぶコンテンツを量産',
+        description:
+            'あなたの実体験をAIにインプットするだけで、読者の心に刺さるブログ・SNS投稿・メルマガ原稿を高速生成できます。',
+    },
+    {
+        icon: <Presentation className="w-8 h-8 text-secondary" />,
+        label: 'Slide AI',
+        title: 'セミナー資料をAIが自動デザイン',
+        description:
+            'GammaやBeautiful.aiにテキストを入力するだけで、説得力あるセミナー資料・提案書が数分で完成。外注費ゼロを実現。',
+    },
+    {
+        icon: <Share2 className="w-8 h-8 text-secondary" />,
+        label: 'SNS AI',
+        title: 'SNS集客を自動化',
+        description:
+            'X・Instagram・TikTok向けの投稿をAIで量産。フォロワーを顧客に変え、売上につながる集客サイクルを構築します。',
+    },
+    {
+        icon: <Layout className="w-8 h-8 text-secondary" />,
+        label: 'LP AI',
+        title: '集客LPをAIで高速作成',
+        description:
+            '商品の強みを言語化してAIに渡すだけで、売れるLP構成・コピーを自動生成。外注費と制作時間を大幅に削減できます。',
+    },
+    {
         icon: <Image className="w-8 h-8 text-secondary" />,
         label: 'Image AI',
-        title: 'AIで画像を一瞬で生成',
+        title: 'プロ品質の画像を一瞬で生成',
         description:
-            'Midjourney・DALL-EなどのAIで、プロクオリティのバナー・アイキャッチ・SNS画像を数秒で作成。デザイナー不要で集客コンテンツを量産できます。',
+            'Midjourney・DALL-Eで、バナー・アイキャッチ・SNS画像をデザイナー不要で作成。集客ビジュアルを低コストで量産できます。',
     },
     {
         icon: <Palette className="w-8 h-8 text-secondary" />,
         label: 'Brand AI',
-        title: 'ブランドデザインの自動化',
+        title: 'ブランドデザインを自動構築',
         description:
-            'AIにブランドコンセプトを入力するだけで、カラーパレット・フォント・ロゴ案を自動提案。一貫したブランドイメージを低コストで構築できます。',
+            'AIにブランドコンセプトを入力するだけで、カラーパレット・フォント・ロゴ案を自動提案。一貫したブランドを低コストで確立。',
     },
     {
-        icon: <Layers className="w-8 h-8 text-secondary" />,
-        label: 'Canva AI',
-        title: 'SNS・LP素材を爆速で作成',
+        icon: <Smartphone className="w-8 h-8 text-secondary" />,
+        label: 'App AI',
+        title: '業務効率化アプリを即作成',
         description:
-            'Canva AIのMagic Designで、テンプレートから高品質なInstagram投稿・サムネ・チラシを瞬時に量産。デザインの知識ゼロでもプロ並みに仕上がります。',
-    },
-    {
-        icon: <Monitor className="w-8 h-8 text-secondary" />,
-        label: 'Slide AI',
-        title: 'スライド資料を自動デザイン',
-        description:
-            'GammaやBeautiful.aiを使えば、テキストを入力するだけでセミナー資料・提案書のデザインが完成。見栄えよい資料で説得力が飛躍的に上がります。',
+            'プログラミング不要。Claude Codeで日報管理・シフト作成など自社専用アプリを構築。バックオフィスを自動化して本業に集中。',
     },
 ];
 
@@ -38,14 +66,14 @@ export const Skills: React.FC = () => {
         <section className="py-24 bg-white">
             <div className="container mx-auto px-4 max-w-5xl">
                 <div className="text-center mb-16">
-                    <span className="text-primary font-bold tracking-widest text-sm">DESIGN SKILLS</span>
+                    <span className="text-primary font-bold tracking-widest text-sm">AI SKILLS</span>
                     <h2 className="text-2xl md:text-4xl font-bold mt-2 text-slate-800">
-                        デザインを加速する<br />
-                        <span className="text-primary border-b-4 border-secondary/50">4つのAIスキル</span>
+                        起業家が身につける<br />
+                        <span className="text-primary border-b-4 border-secondary/50">8つのAIスキル</span>
                     </h2>
                     <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                        画像生成からブランド設計・資料作成まで、AIを使えば<br />
-                        デザイン経験ゼロでもプロクオリティのビジュアルが実現できます。
+                        リサーチ・発信・集客・デザイン・業務効率化まで、AIを活用することで<br />
+                        一人でもビジネス全体をプロ並みに動かせます。
                     </p>
                 </div>
 
@@ -55,7 +83,7 @@ export const Skills: React.FC = () => {
                             key={skill.label}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.15, duration: 0.6 }}
+                            transition={{ delay: (index % 4) * 0.15, duration: 0.6 }}
                             viewport={{ once: true }}
                             className="flex gap-5 p-6 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all duration-300 bg-slate-50"
                         >
