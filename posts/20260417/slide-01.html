@@ -13,32 +13,41 @@ html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',
 .tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
 .tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
 body{
-  background-image:radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-image:radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
   background-size:44px 44px,100% 100%;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:80px 90px;position:relative;color:#fff;text-align:center;
 }
-.bg-num{position:absolute;top:60px;left:50%;transform:translateX(-50%);font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px}
-.badge{display:inline-block;padding:12px 44px;border-radius:4px;background:linear-gradient(135deg,#c9a84c,#a07830);color:#fff;font-weight:700;font-size:24px;letter-spacing:3px;margin-bottom:44px}
+.badge{display:inline-block;padding:12px 44px;border-radius:4px;
+  background:linear-gradient(135deg,#c9a84c,#a07830);
+  color:#fff;font-weight:700;font-size:24px;letter-spacing:3px;margin-bottom:44px}
 h1{font-size:88px;font-weight:900;line-height:1.2;color:#fff;margin-bottom:40px;letter-spacing:-1px}
 .gold{color:#c9a84c}
 .divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
 .divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
 .sub{font-size:26px;color:rgba(255,255,255,0.75);line-height:2;margin-bottom:44px}
-.tag{display:inline-block;border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:10px 36px;font-size:20px;color:rgba(201,168,76,0.85);letter-spacing:2px}
-.brand{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap}
+.tag{display:inline-block;border:1px solid rgba(201,168,76,0.4);border-radius:4px;
+  padding:10px 36px;font-size:20px;color:rgba(201,168,76,0.85);letter-spacing:2px}
+.brand{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap}
 </style>
 </head>
 <body>
   <div class="tc tl"></div><div class="tc tr"></div>
   <div class="tc bl"></div><div class="tc br"></div>
-  <div class="bg-num">01</div>
   <div class="badge">AI初心者向け</div>
-  <h1><span class="gold">今すぐ使える</span><br>AI 5選</h1>
+  <h1><span class="gold">今すぐ使える</span><br>AI 8選</h1>
   <div class="divider"><span>◇</span></div>
   <p class="sub">苦手意識があっても<br>日本語で話しかけるだけでOK</p>
   <div class="tag">👆 保存して後で見てね</div>
   <div class="brand">勝 目 麻 希</div>
+<button id="dl-btn" onclick="savePng()" style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#c9a84c;color:#0b1629;border:none;padding:14px 28px;border-radius:8px;font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.4)">📷 PNG保存</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+function savePng(){const btn=document.getElementById('dl-btn');btn.style.display='none';html2canvas(document.body,{width:1080,height:1350,scale:2,useCORS:true,logging:false}).then(c=>{btn.style.display='';const a=document.createElement('a');a.download='slide-01.png';a.href=c.toDataURL('image/png');a.click();});}
+if(location.search.includes('dl=png'))savePng();
+</script>
 </body>
 </html>
