@@ -24,12 +24,12 @@ const tools = [
   },
   {
     number: '③',
-    name: 'Canva AI',
-    emoji: '🎨',
-    tagline: 'デザイン不要で画像が完成',
+    name: 'Gemini',
+    emoji: '✨',
+    tagline: 'Googleが作ったマルチモーダルAI',
     description:
-      'テキストを入力するだけで\nSNS画像・プレゼン資料が自動生成。\nデザイン知識ゼロでOK！\n無料でも十分使えます◎',
-    tip: '投稿画像はCanvaで作ろう',
+      'テキストはもちろん画像・音声にも対応。\nGoogle検索と連携しているので\n最新情報にも強い！\nGoogleユーザーなら即使えます◎',
+    tip: '画像を見せながら相談しよう',
   },
   {
     number: '④',
