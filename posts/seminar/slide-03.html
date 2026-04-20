@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+body{
+  background:#fff;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:72px 80px;position:relative;
+}
+.tag{font-size:20px;font-weight:700;color:#d4af37;letter-spacing:3px;margin-bottom:16px;text-align:center}
+h2{font-size:48px;font-weight:900;color:#1e1b4b;text-align:center;line-height:1.4;margin-bottom:16px}
+.gold{color:#d4af37}
+.sub{font-size:22px;color:#64748b;text-align:center;line-height:1.8;margin-bottom:44px}
+.steps{display:flex;flex-direction:column;gap:16px;width:100%}
+.step{
+  background:#f8f8fc;border-radius:16px;padding:24px 32px;
+  display:flex;align-items:center;gap:20px;
+}
+.step-n{
+  width:44px;height:44px;border-radius:50%;background:#e2e8f0;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:18px;color:#64748b;flex-shrink:0;
+}
+.step.last .step-n{background:#d4af37;color:#1e1b4b}
+.step.last{background:#fffbeb;border:2px solid #d4af37}
+.step p{font-size:23px;color:#1e1b4b;font-weight:500}
+.step.last p{font-weight:700}
+.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
+</style>
+</head>
+<body>
+  <p class="tag">NotebookLM</p>
+  <h2>作る<span class="gold">「発信特化の</span><br><span class="gold">AIアシスタント」</span></h2>
+  <p class="sub">あなたの思考・メモ・リサーチをAIに記憶させ、<br>発信力を劇的に向上させる4ステップ</p>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><p>過去の発信内容・メモ・資料の選定と整理</p></div>
+    <div class="step"><div class="step-n">2</div><p>NotebookLMへのデータインポート</p></div>
+    <div class="step"><div class="step-n">3</div><p>発信用プロンプトのチューニング</p></div>
+    <div class="step last"><div class="step-n">4</div><p>あなた専用「発信」AIアシスタントの誕生</p></div>
+  </div>
+  <span class="num">3 / 8</span>
+</body>
+</html>

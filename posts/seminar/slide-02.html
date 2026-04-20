@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+body{
+  background:#f8f8fc;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:72px 80px;position:relative;
+}
+.eyebrow{font-size:21px;color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:20px;text-align:center}
+h2{font-size:52px;font-weight:900;color:#1e1b4b;line-height:1.3;text-align:center;margin-bottom:56px}
+.cards{display:flex;flex-direction:column;gap:24px;width:100%}
+.card{
+  background:#fff;border-radius:20px;padding:30px 40px;
+  border-left:6px solid #d4af37;
+  box-shadow:0 4px 24px rgba(30,27,75,0.08);
+  display:flex;align-items:center;gap:20px;
+}
+.icon{font-size:36px;flex-shrink:0}
+.card p{font-size:27px;color:#1e1b4b;font-weight:500;line-height:1.5}
+.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
+</style>
+</head>
+<body>
+  <p class="eyebrow">こんなお悩み、ありませんか？</p>
+  <h2>AIを活用したい<br>起業家・経営者へ</h2>
+  <div class="cards">
+    <div class="card"><span class="icon">😔</span><p>AIに興味はあるけど、何から始めればいいかわからない</p></div>
+    <div class="card"><span class="icon">⏰</span><p>発信・資料作成・業務に追われ、戦略に集中できない</p></div>
+    <div class="card"><span class="icon">💭</span><p>競合との差を広げる「AI活用の実践法」が知りたい</p></div>
+  </div>
+  <span class="num">2 / 8</span>
+</body>
+</html>

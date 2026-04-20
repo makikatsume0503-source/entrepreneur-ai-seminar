@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
+body{
+  background-image:radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
+}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
+.brand{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap}
+.num-badge{width:100px;height:100px;border-radius:50%;background:rgba(201,168,76,0.12);border:2px solid rgba(201,168,76,0.5);display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:900;color:#c9a84c;margin:0 auto 24px}
+h2{font-size:60px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:12px}
+.tagline{font-size:26px;color:#c9a84c;font-weight:700;margin-bottom:36px;letter-spacing:1px}
+.body{font-size:26px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.tip-box{border:1px solid rgba(201,168,76,0.35);border-radius:8px;padding:18px 40px;font-size:22px;color:#c9a84c;background:rgba(201,168,76,0.06)}
+</style>
+</head>
+<body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
+  <div class="num-badge">⑥</div>
+  <h2>ブログ・<br>コラム執筆</h2>
+  <p class="tagline">「書けない」をAIで解決</p>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">テーマと伝えたいことを入力するだけで<br><span class="accent">構成〜本文まで一気に生成。</span><br>自分らしい言葉に整えるだけでOK！<br>発信がグンとラクになる◎</p>
+  <div class="tip-box">✍️ まず構成からAIに作ってもらおう</div>
+  <div class="brand">勝 目 麻 希</div>
+<button id="dl-btn" onclick="savePng()" style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#c9a84c;color:#0b1629;border:none;padding:14px 28px;border-radius:8px;font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.4)">📷 PNG保存</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+function savePng(){const btn=document.getElementById('dl-btn');btn.style.display='none';html2canvas(document.body,{width:1080,height:1350,scale:2,useCORS:true,logging:false}).then(c=>{btn.style.display='';const a=document.createElement('a');a.download='slide-07.png';a.href=c.toDataURL('image/png');a.click();});}
+if(location.search.includes('dl=png'))savePng();
+</script>
+</body>
+</html>
