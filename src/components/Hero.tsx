@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
                     className="mb-4"
                 >
                     <p className="text-[#FFECC0] font-bold text-lg md:text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                        ＼ まずは2時間で「最強の右腕」を体感してください ／
+                        ＼ 専門知識ゼロから、AIを使いこなす側へ ／
                     </p>
                 </motion.div>
                 
