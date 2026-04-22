@@ -22,6 +22,17 @@ export const Hero: React.FC = () => {
             
             {/* CTA Button placed below the hero image */}
             <div className="container mx-auto px-4 mt-8 md:mt-12 text-center relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="mb-4"
+                >
+                    <p className="text-[#FFECC0] font-bold text-lg md:text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                        ＼ まずは2時間で「最強の右腕」を体感してください ／
+                    </p>
+                </motion.div>
+                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mx-auto">
                     <motion.a
                         href="https://buy.stripe.com/3cIcN7dCmeIocQ5gT7bV60e"
