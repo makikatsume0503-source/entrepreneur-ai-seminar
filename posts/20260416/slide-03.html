@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+.tc{position:absolute;width:54px;height:54px;border-style:solid;border-color:rgba(201,168,76,0.6);filter:drop-shadow(0 0 4px rgba(201,168,76,0.35))}
+.tc.tl{top:38px;left:38px;border-width:2px 0 0 2px}
+.tc.tr{top:38px;right:38px;border-width:2px 2px 0 0}
+.tc.bl{bottom:38px;left:38px;border-width:0 0 2px 2px}
+.tc.br{bottom:38px;right:38px;border-width:0 2px 2px 0}
+.tc::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#c9a84c;box-shadow:0 0 10px rgba(201,168,76,0.9),0 0 18px rgba(201,168,76,0.4)}
+.tc.tl::before{top:-4px;left:-4px}.tc.tr::before{top:-4px;right:-4px}
+.tc.bl::before{bottom:-4px;left:-4px}.tc.br::before{bottom:-4px;right:-4px}
+body{
+  background-image:
+    radial-gradient(circle,rgba(201,168,76,0.055) 1px,transparent 1px),
+    radial-gradient(ellipse 80% 60% at 50% 45%,#162040 0%,#0b1629 65%);
+  background-size:44px 44px,100% 100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:80px 90px;position:relative;color:#fff;text-align:center;
+}
+.bg-num{
+  position:absolute;top:60px;left:50%;transform:translateX(-50%);
+  font-size:220px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,0.09);
+  line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-8px;
+}
+h2{font-size:56px;font-weight:900;color:#c9a84c;line-height:1.3;margin-bottom:28px}
+.divider{display:flex;align-items:center;gap:14px;margin:0 auto 40px;max-width:280px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.65),transparent);box-shadow:0 0 6px rgba(201,168,76,0.25)}
+.divider span{color:#c9a84c;font-size:16px;text-shadow:0 0 8px rgba(201,168,76,0.8)}
+.body{font-size:28px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:24px}
+.accent{color:#c9a84c;font-weight:700}
+.large{font-size:32px;color:rgba(255,255,255,0.95);font-weight:500;line-height:1.7;margin-bottom:28px}
+.note{font-size:21px;color:rgba(255,255,255,0.45);line-height:1.9}
+.brand{
+  position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
+  font-size:18px;color:#c9a84c;letter-spacing:8px;font-weight:500;white-space:nowrap;
+}
+</style>
+</head>
+<body>
+  <div class="tc tl"></div><div class="tc tr"></div>
+  <div class="tc bl"></div><div class="tc br"></div>
+  <div class="bg-num">03</div>
+  <h2>たとえば、<br>LPを自分で作れます</h2>
+  <div class="divider"><span>◇</span></div>
+  <p class="body">「こんなサービスの<br>ランディングページを作って」<br>と伝えるだけ。</p>
+  <p class="large"><span class="accent">デザイン・構成・コード</span>まで</p>
+  <p class="large">AIが一気に仕上げてくれます。</p>
+  <p class="note">外注費を抑えて、自分のペースで<br>何度でも修正できるのが魅力です</p>
+  <div class="brand">勝 目 麻 希</div>
+</body>
+</html>

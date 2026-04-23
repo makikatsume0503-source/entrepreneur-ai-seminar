@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans JP',sans-serif}
+body{
+  background:#fff;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:80px;position:relative;
+}
+.top{font-size:21px;color:#d4af37;font-weight:700;letter-spacing:3px;margin-bottom:24px;text-align:center}
+h2{font-size:50px;font-weight:900;color:#1e1b4b;text-align:center;margin-bottom:48px;line-height:1.3}
+.details{
+  background:#f8f8fc;border-radius:24px;padding:44px 60px;width:100%;
+  display:flex;flex-direction:column;gap:28px;margin-bottom:44px;
+}
+.row{display:flex;align-items:center;gap:24px}
+.label{font-size:19px;color:#64748b;font-weight:500;width:120px;flex-shrink:0}
+.value{font-size:28px;color:#1e1b4b;font-weight:700}
+.price{font-size:52px;color:#1e1b4b;font-weight:900}
+.price-note{font-size:18px;color:#94a3b8;font-weight:400;margin-left:8px}
+.cta{
+  display:inline-block;padding:24px 80px;border-radius:16px;
+  background:linear-gradient(135deg,#FFECC0,#d4af37,#B8860B);
+  color:#1e1b4b;font-weight:900;font-size:30px;letter-spacing:1px;
+  box-shadow:0 8px 32px rgba(212,175,55,0.4);
+}
+.num{position:absolute;bottom:44px;right:60px;font-size:19px;color:rgba(30,27,75,0.3);letter-spacing:1px}
+</style>
+</head>
+<body>
+  <p class="top">開催概要</p>
+  <h2>今すぐ参加を<br>申し込む</h2>
+  <div class="details">
+    <div class="row">
+      <span class="label">📅 日時</span>
+      <span class="value">3月12日（木）9:00〜11:00</span>
+    </div>
+    <div class="row">
+      <span class="label">💻 形式</span>
+      <span class="value">オンライン Zoom</span>
+    </div>
+    <div class="row">
+      <span class="label">💰 参加費</span>
+      <span class="price">¥11,000<span class="price-note">（税込）</span></span>
+    </div>
+  </div>
+  <div class="cta">リアルタイム参加はこちら →</div>
+  <span class="num">8 / 8</span>
+</body>
+</html>
