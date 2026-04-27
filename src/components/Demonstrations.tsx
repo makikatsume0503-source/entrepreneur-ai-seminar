@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GitBranch, Smartphone, Layout } from 'lucide-react';
+import { Workflow, Smartphone, Layout } from 'lucide-react';
 
 export const Demonstrations: React.FC = () => {
     return (
@@ -21,9 +21,9 @@ export const Demonstrations: React.FC = () => {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     <DemoCard
-                        icon={<GitBranch className="w-10 h-10 text-secondary" />}
-                        title="GitHubでSNS・ブログを完全仕組化"
-                        description="アイデアの管理から下書きレビュー・公開まで、GitHubで一連の発信ワークフローを自動化。投稿の抜け漏れをなくし、コンテンツを資産として蓄積・再利用できる仕組みが手に入ります。"
+                        icon={<Workflow className="w-10 h-10 text-secondary" />}
+                        title="発信ワークフローの仕組み化"
+                        description="SNS投稿やブログのアイデア管理から公開まで、一連の流れを自動化。コンテンツを資産として蓄積・再利用できる仕組みをつくることで、発信が「作業」から「仕組み」に変わります。"
                         delay={0}
                     />
                     <DemoCard
