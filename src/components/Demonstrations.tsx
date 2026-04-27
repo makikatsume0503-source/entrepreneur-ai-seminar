@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Presentation, Smartphone, Layout } from 'lucide-react';
+import { GitBranch, Smartphone, Layout } from 'lucide-react';
 
 export const Demonstrations: React.FC = () => {
     return (
@@ -21,9 +21,9 @@ export const Demonstrations: React.FC = () => {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     <DemoCard
-                        icon={<Presentation className="w-10 h-10 text-secondary" />}
-                        title="圧倒的スピードでの発信コンテンツ作成"
-                        description="あなた自身のメモやリサーチ結果をNotebookLMに読み込ませるだけで、SNS投稿からブログ、スライド資料まで、自然で説得力のあるコンテンツが一瞬で完成します。"
+                        icon={<GitBranch className="w-10 h-10 text-secondary" />}
+                        title="GitHubでSNS・ブログを完全仕組化"
+                        description="アイデアの管理から下書きレビュー・公開まで、GitHubで一連の発信ワークフローを自動化。投稿の抜け漏れをなくし、コンテンツを資産として蓄積・再利用できる仕組みが手に入ります。"
                         delay={0}
                     />
                     <DemoCard

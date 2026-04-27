@@ -61,7 +61,7 @@ export const DigitalTwin: React.FC = () => {
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-500">3</div>
-                                <p className="text-sm text-slate-700">発信用プロンプトのチューニング</p>
+                                <p className="text-sm text-slate-700">GitHubで発信ワークフローを仕組化</p>
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-secondary/30 flex items-center gap-3 bg-secondary/5">
                                 <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold">4</div>
