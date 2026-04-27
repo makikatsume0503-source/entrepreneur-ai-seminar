@@ -28,8 +28,8 @@ export const Demonstrations: React.FC = () => {
                     />
                     <DemoCard
                         icon={<Layout className="w-10 h-10 text-secondary" />}
-                        title="集客用LP・セールスレター作成"
-                        description="自社商品の強みを言語化し、売れるLPの構成・コピーを構築。外注費と時間を大幅にカットします。"
+                        title="AIで集客LPをゼロから作成"
+                        description="AIと壁打ちしながら構成・コピーを作り、ファーストビュー画像を生成し、そのままコーディングまで完結。外注なしで本格的なLPが完成します。"
                         delay={0.2}
                     />
                     <DemoCard
